@@ -4,7 +4,7 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6,8,12,20,24,30&height=300&section=header&text=THEDIFY&fontSize=90&fontAlignY=35&animation=twinkling&fontColor=00F5FF&desc=Founder%20%26%20CEO%20of%20EDIFY%20%7C%20AI%20Innovator%20%7C%20Dream%20Enabler&descAlignY=55&descSize=20&descColor=FFFFFF"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6,8,12,20,24,30&height=300&section=header&text=THEDIFY&fontSize=90&fontAlignY=35&animation=twinkling&fontColor=00F5FF&desc=Founder%20and%20CEO%20of%20EDIFY%20|%20AI%20Innovator%20|%20Dream%20Enabler&descAlignY=55&descSize=20&descColor=FFFFFF"/>
 
 <!-- DYNAMIC HOLOGRAPHIC TYPING EFFECT -->
 <p align="center">
@@ -19,7 +19,7 @@
 <tr>
 <td align="center" width="900">
 
-### 🌟 **"[YOUR NAME HERE]"** 🌟
+### 🌟 **SANTIAGO** 🌟
 
 **Founder & CEO of EDIFY** | **AI Innovation Architect** | **High School Student**
 
@@ -28,7 +28,7 @@
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="800">
 
-🎓 **Student at Lycée Franco-Mexicain**  
+🎓 **High School Student**  
 🚀 **Building Enterprise AI Solutions**  
 💡 **Pioneer of Novel RAG Techniques**
 
@@ -59,7 +59,7 @@
 ```python
 class THEDIFY:
     def __init__(self):
-        self.name = "[YOUR NAME HERE]"  # 🌟 Real name placeholder
+        self.name = "Santiago de la Fuente"
         self.role = "Founder & CEO of EDIFY"
         self.title = "AI Engineer & Innovation Architect"
         self.location = "🇲🇽 Mexico"
@@ -100,7 +100,7 @@ class THEDIFY:
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- KNOWLEDGE GRAPH - TALLER & MORE VISIBLE -->
+<!-- KNOWLEDGE GRAPH VISUALIZATION - TALLER & MORE VISIBLE -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 ## <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="30"> **Knowledge Graph**
@@ -108,78 +108,152 @@ class THEDIFY:
 <div align="center">
 
 ```mermaid
-graph TB
-    A[<b>THEDIFY</b><br/>AI Innovation Architect<br/>Founder & CEO]
+graph TD
+    A[<b>THEDIFY</b><br/>Santiago de la Fuente<br/>AI Innovation Architect]
     
-    A -->|🎓 Flagship Project| B[<b>EDIFY</b><br/>Enterprise AI Education<br/>Novel RAG Technique]
-    A -->|⚽ Personal Project| C[<b>Axolotl</b><br/>Sports Analytics<br/>Athlete Empowerment]
-    A -->|🔥 Social Impact| D[<b>GUIRA</b><br/>Fire Prevention<br/>Community Protection]
-    A -->|📱 EdTech| E[<b>MenTora</b><br/>PWA Learning<br/>AI Preparation]
+    A -->|Founder & CEO| B[<b>EDIFY</b><br/>Enterprise Education<br/>Novel RAG System]
+    A -->|Creator| C[<b>Axolotl</b><br/>Sports Analytics<br/>CV Platform]
+    A -->|Developer| D[<b>GUIRA</b><br/>Fire Prevention<br/>Disaster AI]
+    A -->|Builder| E[<b>MenTora</b><br/>EdTech PWA<br/>AI Learning]
     
-    B --> B1[Your Goals]
-    B --> B2[Your Data]
-    B --> B3[Your Dreams]
-    B1 --> B4[Personalized Learning]
-    B2 --> B4
-    B3 --> B4
-    B4 --> B5[10K+ Users]
+    B --> B1[📚 Custom RAG<br/>Technique]
+    B1 --> B1A[Hybrid Search]
+    B1 --> B1B[Smart Citations]
     
-    C --> C1[Computer Vision]
-    C --> C2[Performance Metrics]
-    C1 --> C3[Real-time Analysis]
-    C2 --> C3
-    C3 --> C4[Professional Analytics<br/>for Everyone]
+    B --> B2[⚡ Enterprise<br/>Scale]
+    B2 --> B2A[1K+ Users]
+    B2 --> B2B[Sub-2s Latency]
     
-    D --> D1[Multi-Modal AI<br/>5 Models]
-    D1 --> D2[YOLOv8]
-    D1 --> D3[TimeSFormer]
-    D1 --> D4[ResNet50]
-    D1 --> D5[CSRNet]
-    D2 --> D6[Early Warning<br/>System]
-    D3 --> D6
-    D4 --> D6
-    D5 --> D6
-    D6 --> D7[Small Community<br/>Protection]
+    B --> B3[🎓 Personalized<br/>Learning]
+    B3 --> B3A[Your Goals]
+    B3 --> B3B[Your Data]
     
-    E --> E1[Accessible Pricing]
-    E --> E2[AI Curriculum]
-    E1 --> E3[Equal Access]
-    E2 --> E3
-    E3 --> E4[AI-Ready<br/>Future]
+    C --> C1[👁️ Computer<br/>Vision]
+    C1 --> C1A[Performance<br/>Tracking]
+    C1 --> C1B[Real-time<br/>Analysis]
     
-    A --> F[<b>Core Technologies</b>]
-    F --> F1[Python Expert<br/>100%]
-    F --> F2[PyTorch<br/>TensorFlow]
-    F --> F3[Azure Cloud<br/>OpenAI]
-    F --> F4[JavaScript<br/>TypeScript]
-    F --> F5[Computer Vision<br/>90%]
+    C --> C2[⚽ Athlete<br/>Empowerment]
+    C2 --> C2A[Technical<br/>Metrics]
+    C2 --> C2B[Physical<br/>Metrics]
     
-    A --> G[<b>Mission</b>]
-    G --> G1[Equal Starting Line]
-    G --> G2[Democratize AI]
-    G --> G3[Social Impact]
-    G1 --> G4[Empower Dreams]
-    G2 --> G4
-    G3 --> G4
+    C --> C3[🏗️ Microservices]
+    C3 --> C3A[Docker]
+    C3 --> C3B[Redis Queue]
     
-    A --> H[<b>Passions</b>]
-    H --> H1[🚗 Lamborghini<br/>Egoista]
-    H --> H2[🎵 José José<br/>Mexican Music]
-    H --> H3[✏️ Pencil &<br/>Paper Design]
+    D --> D1[🛰️ Multi-Modal<br/>Detection]
+    D1 --> D1A[YOLOv8<br/>Fire/Smoke]
+    D1 --> D1B[TimeSFormer<br/>Temporal]
     
-    style A fill:#00F5FF,stroke:#0099CC,stroke-width:4px,color:#000,font-weight:bold
-    style B fill:#667eea,stroke:#5568D3,stroke-width:3px,color:#fff
-    style C fill:#8B5CF6,stroke:#7C3AED,stroke-width:3px,color:#fff
-    style D fill:#A855F7,stroke:#9333EA,stroke-width:3px,color:#fff
-    style E fill:#C084FC,stroke:#A855F7,stroke-width:3px,color:#fff
-    style F fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
-    style G fill:#667eea,stroke:#5568D3,stroke-width:2px,color:#fff
-    style H fill:#8B5CF6,stroke:#7C3AED,stroke-width:2px,color:#fff
-    style B4 fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
-    style C4 fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
-    style D7 fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
-    style E4 fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
-    style G4 fill:#00F5FF,stroke:#0099CC,stroke-width:2px,color:#000
+    D --> D2[🌍 Community<br/>Protection]
+    D2 --> D2A[Early Warning]
+    D2 --> D2B[Risk Mapping]
+    
+    D --> D3[🔮 Prediction]
+    D3 --> D3A[Fire Spread<br/>Simulation]
+    D3 --> D3B[GIS Projection]
+    
+    E --> E1[📱 PWA<br/>Platform]
+    E1 --> E1A[Accessible<br/>Anywhere]
+    E1 --> E1B[Offline Ready]
+    
+    E --> E2[🎯 AI Prep]
+    E2 --> E2A[Modern<br/>Curriculum]
+    E2 --> E2B[Interactive<br/>Learning]
+    
+    E --> E3[💳 Accessible<br/>Pricing]
+    E3 --> E3A[Stripe<br/>Integration]
+    E3 --> E3B[Global<br/>Reach]
+    
+    A --> F[<b>CORE TECH</b>]
+    F --> F1[🐍 Python<br/>Expert]
+    F1 --> F1A[PyTorch]
+    F1 --> F1B[TensorFlow]
+    
+    F --> F2[☁️ Azure<br/>Cloud]
+    F2 --> F2A[OpenAI]
+    F2 --> F2B[AI Search]
+    
+    F --> F3[⚡ JavaScript<br/>TypeScript]
+    F3 --> F3A[React 18]
+    F3 --> F3B[Node.js]
+    
+    F --> F4[🏗️ Backend]
+    F4 --> F4A[FastAPI]
+    F4 --> F4B[Flask]
+    
+    A --> G[<b>PHILOSOPHY</b>]
+    G --> G1[🌍 Equal<br/>Opportunities]
+    G1 --> G1A[Same Starting<br/>Line]
+    
+    G --> G2[📖 Open<br/>Source]
+    G2 --> G2A[Knowledge<br/>Sharing]
+    
+    G --> G3[💡 Social<br/>Impact]
+    G3 --> G3A[Community<br/>First]
+    
+    style A fill:#00F5FF,stroke:#0099CC,stroke-width:4px,color:#000,font-size:16px
+    style B fill:#667eea,stroke:#5568D3,stroke-width:3px,color:#fff,font-size:14px
+    style C fill:#8B5CF6,stroke:#7C3AED,stroke-width:3px,color:#fff,font-size:14px
+    style D fill:#A855F7,stroke:#9333EA,stroke-width:3px,color:#fff,font-size:14px
+    style E fill:#C084FC,stroke:#A855F7,stroke-width:3px,color:#fff,font-size:14px
+    style F fill:#00F5FF,stroke:#0099CC,stroke-width:3px,color:#000,font-size:14px
+    style G fill:#667eea,stroke:#5568D3,stroke-width:3px,color:#fff,font-size:14px
+    
+    style B1 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style B2 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style B3 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style C1 fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
+    style C2 fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
+    style C3 fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
+    style D1 fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style D2 fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style D3 fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style E1 fill:#9333EA,stroke:#C084FC,stroke-width:2px,color:#fff
+    style E2 fill:#9333EA,stroke:#C084FC,stroke-width:2px,color:#fff
+    style E3 fill:#9333EA,stroke:#C084FC,stroke-width:2px,color:#fff
+    style F1 fill:#0EA5E9,stroke:#00F5FF,stroke-width:2px,color:#000
+    style F2 fill:#0EA5E9,stroke:#00F5FF,stroke-width:2px,color:#000
+    style F3 fill:#0EA5E9,stroke:#00F5FF,stroke-width:2px,color:#000
+    style F4 fill:#0EA5E9,stroke:#00F5FF,stroke-width:2px,color:#000
+    style G1 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style G2 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style G3 fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    
+    style B1A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style B1B fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style B2A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style B2B fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style B3A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style B3B fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style C1A fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style C1B fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style C2A fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style C2B fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style C3A fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style C3B fill:#4C1D95,stroke:#6D28D9,stroke-width:1px,color:#fff
+    style D1A fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style D1B fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style D2A fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style D2B fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style D3A fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style D3B fill:#581C87,stroke:#7E22CE,stroke-width:1px,color:#fff
+    style E1A fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style E1B fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style E2A fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style E2B fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style E3A fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style E3B fill:#6B21A8,stroke:#9333EA,stroke-width:1px,color:#fff
+    style F1A fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F1B fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F2A fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F2B fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F3A fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F3B fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F4A fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style F4B fill:#0369A1,stroke:#0EA5E9,stroke-width:1px,color:#fff
+    style G1A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style G2A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
+    style G3A fill:#312E81,stroke:#4338CA,stroke-width:1px,color:#fff
 ```
 
 </div>
@@ -207,7 +281,7 @@ graph TB
 ### 🎓 **[EDIFY](https://github.com/THEDIFY/EDIFY)** - Enterprise AI Education Platform
 
 <img src="https://img.shields.io/badge/⭐_FLAGSHIP-Founder's_Favorite-FFD700?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🚀_Production-10K+_Users-00F5FF?style=for-the-badge&labelColor=0a192f&color=00F5FF" />
+<img src="https://img.shields.io/badge/🚀_Production-1k+_Users-00F5FF?style=for-the-badge&labelColor=0a192f&color=00F5FF" />
 
 ---
 
@@ -305,7 +379,7 @@ This is my personal project—where my love for football meets AI innovation. Ax
 </table>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- GUIRA - VIOLET GRADIENT -->
+<!-- GUIRA - GREEN/VIOLET GRADIENT -->
 <!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
 
 <table>
@@ -413,7 +487,7 @@ MenTora is my answer to the AI skills gap. As artificial intelligence reshapes e
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- SPECIALIZATIONS -->
+<!-- SPECIALIZATIONS - HEXAGONAL FUTURISTIC DESIGN -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 ## <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="30"> **Specializations & Expertise**
@@ -549,47 +623,9 @@ C++                  ████████████░░░░░░░�
 
 </div>
 
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- GITHUB STATISTICS - BLUE/VIOLET THEME -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/212257472-08e52665-c503-4bd9-aa20-f5a4dae769b5.gif" width="30"> **GitHub Analytics**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- STATS ROW -->
-<table>
-<tr>
-<td width="50%" align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=THEDIFY&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&bg_color=0d1117&title_color=00F5FF&text_color=ffffff&icon_color=8B5CF6&border_color=667eea&border_radius=15&hide_border=false" width="100%"/>
-
-</td>
-<td width="50%" align="center">
-
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=THEDIFY&layout=compact&langs_count=8&theme=tokyonight&bg_color=0d1117&title_color=00F5FF&text_color=ffffff&border_color=667eea&border_radius=15&hide_border=false" width="100%"/>
-
-</td>
-</tr>
-</table>
-
-<!-- STREAK -->
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=THEDIFY&theme=tokyonight&background=0d1117&ring=00F5FF&fire=A855F7&currStreakLabel=00F5FF&border=667eea&border_radius=15&stroke=8B5CF6&sideLabels=ffffff" width="100%" alt="GitHub Streak" />
-
-<!-- ACTIVITY GRAPH - BLUE LINES -->
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=THEDIFY&custom_title=Contribution%20Activity&bg_color=0d1117&color=00F5FF&line=667eea&point=8B5CF6&area_color=A855F7&area=true&hide_border=false&title_color=00F5FF&radius=15" width="100%" alt="Activity Graph"/>
-
-<!-- TROPHIES -->
-<img src="https://github-profile-trophy.vercel.app/?username=THEDIFY&theme=tokyonight&no-frame=false&no-bg=false&column=7&margin-w=10&margin-h=10&title=MultiLanguage,Commits,Repositories,Stars,Followers,PullRequest,Issues" width="100%" alt="GitHub Trophies" />
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- BEYOND CODE - PASSIONS -->
+<!-- BEYOND CODE - LAMBORGHINI & JOSÉ JOSÉ -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" width="30" /> **Beyond Code: My Passions**
@@ -723,7 +759,7 @@ the journey of innovation always starts with a single line on paper.*
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- ACHIEVEMENTS -->
+<!-- KEY ACHIEVEMENTS -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216122065-2f028bae-25d6-4a3c-bc9f-175394ed5011.png" width="30" /> **Key Achievements**
@@ -734,7 +770,7 @@ the journey of innovation always starts with a single line on paper.*
 
 | 🏆 Achievement | 📝 Details |
 |:---:|:---|
-| **🚀 Founder & CEO** | Created EDIFY - Enterprise AI education platform serving 10K+ users |
+| **🚀 Founder & CEO** | Created EDIFY - Enterprise AI education platform serving 1k+ users |
 | **🔬 RAG Innovation** | Pioneered novel retrieval technique for personalized learning |
 | **⚡ Enterprise Scale** | Built production system with sub-2s latency, 99.9% uptime |
 | **🎯 Multi-Modal AI** | Integrated 5+ specialized models (YOLO, TimeSFormer, ResNet, CSRNet) |
@@ -748,7 +784,7 @@ the journey of innovation always starts with a single line on paper.*
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- CONNECT -->
+<!-- CONNECT & CURRENT FOCUS -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 ## <img src="https://user-images.githubusercontent.com/74038190/216120981-b9507c36-0e04-4469-8e27-c99271b45ba5.png" width="30" /> **Let's Connect**
@@ -825,7 +861,7 @@ console.log("Mission: Empowering dreams through technology ✨");
 </div>
 
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- FOOTER -->
+<!-- PHILOSOPHY & FOOTER -->
 <!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
@@ -860,6 +896,7 @@ console.log("Mission: Empowering dreams through technology ✨");
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
+<!-- FOOTER WAVE -->
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6,8,12,20,24,30&height=150&section=footer&animation=twinkling"/>
 
 ---
