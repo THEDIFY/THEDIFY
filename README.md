@@ -59,11 +59,11 @@
 ```python
 class THEDIFY:
     def __init__(self):
-        self.name = "Santiago de la Fuente"
+        self.name = "Santiago"
         self.role = "Founder & CEO of EDIFY"
         self.title = "AI Engineer & Innovation Architect"
         self.location = "🇲🇽 Mexico"
-        self.education = "Lycée Franco-Mexicain (High School)"
+        self.education = "(High School) and autodidact"
         self.mission = "Empowering others to achieve their dreams"
         
     def get_expertise(self):
