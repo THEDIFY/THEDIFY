@@ -797,7 +797,7 @@ the journey of innovation always starts with a single line on paper.*
   <a href="https://github.com/THEDIFY">
     <img src="https://img.shields.io/badge/GitHub-THEDIFY-181717?style=for-the-badge&logo=github&logoColor=white" />
   </a>
-  <a href="mailto:your.email@example.com">
+  <a href="mailto:rasanti2008@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-00F5FF?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
   <a href="https://linkedin.com/in/your-profile">
