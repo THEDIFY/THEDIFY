@@ -109,7 +109,7 @@ class THEDIFY:
 
 ```mermaid
 graph TD
-    A[<b>THEDIFY</b><br/>Santiago de la Fuente<br/>AI Innovation Architect]
+    A[<b>THEDIFY</b><br/>Santiago<br/>AI Innovation Architect]
     
     A -->|Founder & CEO| B[<b>EDIFY</b><br/>Enterprise Education<br/>Novel RAG System]
     A -->|Creator| C[<b>Axolotl</b><br/>Sports Analytics<br/>CV Platform]
