@@ -800,7 +800,7 @@ the journey of innovation always starts with a single line on paper.*
   <a href="mailto:rasanti2008@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-00F5FF?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/your-profile">
+  <a href="[https://linkedin.com/in/your-profile](https://www.linkedin.com/in/santiago-ramirez-0a5073292/)">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-8B5CF6?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
