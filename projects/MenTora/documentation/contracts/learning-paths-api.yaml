@@ -1,0 +1,606 @@
+openapi: 3.0.3
+info:
+  title: MenTora Learning Paths API
+  description: API endpoints for learning path visualization and progress tracking
+  version: 1.0.0
+  contact:
+    name: MenTora API Support
+
+servers:
+  - url: https://mentora-api.azurewebsites.net/api/v1
+    description: Production server
+  - url: http://localhost:8000/api/v1
+    description: Local development server
+
+tags:
+  - name: learning-paths
+    description: Learning path operations
+  - name: progress
+    description: User progress tracking
+
+paths:
+  /learning-paths/{course_id}:
+    get:
+      tags:
+        - learning-paths
+      summary: Get learning path for a course
+      description: |
+        Retrieve complete learning path including modules, lessons, and visualization
+        coordinates for SVG rendering. Includes path nodes for animated path display.
+      operationId: getLearningPath
+      parameters:
+        - name: course_id
+          in: path
+          description: Course ID
+          required: true
+          schema:
+            type: string
+            example: "course_001"
+      
+      responses:
+        '200':
+          description: Learning path retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LearningPath'
+              example:
+                id: "path_001"
+                course_id: "course_001"
+                total_lessons: 15
+                estimated_weeks: 4
+                path_nodes:
+                  - module_id: "module_001"
+                    lesson_id: "lesson_001"
+                    x_position: 0.5
+                    y_position: 0.1
+                    dependencies: []
+                  - module_id: "module_001"
+                    lesson_id: "lesson_002"
+                    x_position: 0.5
+                    y_position: 0.2
+                    dependencies: ["lesson_001"]
+                modules:
+                  - id: "module_001"
+                    title: "Introduction"
+                    order: 1
+                    lessons:
+                      - id: "lesson_001"
+                        title: "Getting Started"
+                        order: 1
+                        estimated_minutes: 30
+        
+        '404':
+          description: Learning path not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /progress/{course_id}:
+    get:
+      tags:
+        - progress
+      summary: Get user progress for a course
+      description: |
+        Retrieve detailed progress including completed lessons, quiz scores,
+        exercise submissions, and recent activity. Used to render progress
+        overlay on learning path visualization.
+      operationId: getUserProgress
+      parameters:
+        - name: course_id
+          in: path
+          description: Course ID
+          required: true
+          schema:
+            type: string
+            example: "course_001"
+      
+      responses:
+        '200':
+          description: Progress retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserProgress'
+              example:
+                user_id: "user_12345"
+                course_id: "course_001"
+                enrollment_date: "2024-01-15T10:30:00Z"
+                last_active: "2024-01-22T14:45:00Z"
+                completion_percentage: 40.0
+                recent_lessons:
+                  - "lesson_006"
+                  - "lesson_005"
+                  - "lesson_004"
+                lesson_progress:
+                  lesson_001:
+                    lesson_id: "lesson_001"
+                    completed: true
+                    completed_at: "2024-01-16T12:00:00Z"
+                    time_spent_seconds: 1800
+                  lesson_002:
+                    lesson_id: "lesson_002"
+                    completed: true
+                    completed_at: "2024-01-17T15:30:00Z"
+                    quiz_score: 85
+                    time_spent_seconds: 2400
+        
+        '404':
+          description: Progress not found (user not enrolled)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /progress/{course_id}/continue:
+    get:
+      tags:
+        - progress
+      summary: Get "Continue Learning" recommendation
+      description: |
+        Retrieve the next lesson to resume learning based on user's progress.
+        Returns the first incomplete lesson in the path, considering dependencies.
+        Used by dashboard "Continue Learning" button (FR-043).
+      operationId: getContinueLearning
+      parameters:
+        - name: course_id
+          in: path
+          description: Course ID
+          required: true
+          schema:
+            type: string
+            example: "course_001"
+      
+      responses:
+        '200':
+          description: Next lesson retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - next_lesson_id
+                  - lesson_title
+                  - module_title
+                properties:
+                  next_lesson_id:
+                    type: string
+                    description: ID of next incomplete lesson
+                    example: "lesson_007"
+                  lesson_title:
+                    type: string
+                    description: Lesson title
+                    example: "Neural Networks Basics"
+                  module_title:
+                    type: string
+                    description: Module title
+                    example: "Deep Learning"
+                  progress_percentage:
+                    type: number
+                    format: float
+                    description: Overall course completion percentage
+                    example: 45.5
+        
+        '404':
+          description: No incomplete lessons (course completed or not enrolled)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Course Completed"
+                detail: "All lessons in this course have been completed"
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /progress/{course_id}/lessons/{lesson_id}:
+    post:
+      tags:
+        - progress
+      summary: Update lesson progress
+      description: |
+        Record lesson completion, quiz score, or exercise submission.
+        Automatically updates overall progress and recent lessons list.
+      operationId: updateLessonProgress
+      parameters:
+        - name: course_id
+          in: path
+          description: Course ID
+          required: true
+          schema:
+            type: string
+            example: "course_001"
+        
+        - name: lesson_id
+          in: path
+          description: Lesson ID
+          required: true
+          schema:
+            type: string
+            example: "lesson_007"
+      
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LessonProgressUpdate'
+            examples:
+              quiz_submission:
+                summary: Quiz submission
+                value:
+                  completed: true
+                  quiz_score: 90
+                  time_spent_seconds: 600
+              
+              exercise_submission:
+                summary: Exercise submission
+                value:
+                  completed: true
+                  exercise_submitted: true
+                  time_spent_seconds: 1200
+              
+              video_view:
+                summary: Video view (incomplete)
+                value:
+                  completed: false
+                  time_spent_seconds: 300
+      
+      responses:
+        '200':
+          description: Progress updated successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - success
+                  - completion_percentage
+                properties:
+                  success:
+                    type: boolean
+                    example: true
+                  completion_percentage:
+                    type: number
+                    format: float
+                    description: Updated overall course completion
+                    example: 48.5
+                  message:
+                    type: string
+                    example: "Lesson marked as completed"
+        
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Validation Error"
+                detail: "quiz_score must be between 0 and 100"
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '404':
+          description: Lesson not found or user not enrolled
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+components:
+  schemas:
+    LearningPath:
+      type: object
+      required:
+        - id
+        - course_id
+        - modules
+        - path_nodes
+        - total_lessons
+      properties:
+        id:
+          type: string
+          description: Learning path ID
+          example: "path_001"
+        course_id:
+          type: string
+          description: Associated course ID
+          example: "course_001"
+        total_lessons:
+          type: integer
+          minimum: 1
+          description: Total lessons in path
+          example: 15
+        estimated_weeks:
+          type: integer
+          minimum: 1
+          maximum: 52
+          nullable: true
+          description: Estimated completion time
+          example: 4
+        path_nodes:
+          type: array
+          items:
+            $ref: '#/components/schemas/PathNode'
+          description: Visualization coordinates for SVG rendering
+        modules:
+          type: array
+          items:
+            $ref: '#/components/schemas/Module'
+          description: Course modules with lessons
+    
+    PathNode:
+      type: object
+      required:
+        - module_id
+        - lesson_id
+        - x_position
+        - y_position
+      properties:
+        module_id:
+          type: string
+          description: Module ID
+          example: "module_001"
+        lesson_id:
+          type: string
+          description: Lesson ID
+          example: "lesson_001"
+        x_position:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          description: Normalized X coordinate (0-1 for SVG viewBox)
+          example: 0.5
+        y_position:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 1
+          description: Normalized Y coordinate (0-1 for SVG viewBox)
+          example: 0.1
+        dependencies:
+          type: array
+          items:
+            type: string
+          description: IDs of prerequisite lessons
+          example: []
+    
+    Module:
+      type: object
+      required:
+        - id
+        - title
+        - order
+        - lessons
+      properties:
+        id:
+          type: string
+          description: Module ID
+          example: "module_001"
+        title:
+          type: string
+          maxLength: 200
+          description: Module title
+          example: "Introduction to ML"
+        order:
+          type: integer
+          minimum: 1
+          description: Module sequence number
+          example: 1
+        lessons:
+          type: array
+          items:
+            $ref: '#/components/schemas/Lesson'
+          description: Lessons in module
+    
+    Lesson:
+      type: object
+      required:
+        - id
+        - title
+        - order
+      properties:
+        id:
+          type: string
+          description: Lesson ID
+          example: "lesson_001"
+        title:
+          type: string
+          maxLength: 200
+          description: Lesson title
+          example: "Getting Started"
+        order:
+          type: integer
+          minimum: 1
+          description: Lesson sequence number
+          example: 1
+        estimated_minutes:
+          type: integer
+          minimum: 1
+          nullable: true
+          description: Estimated completion time
+          example: 30
+    
+    UserProgress:
+      type: object
+      required:
+        - user_id
+        - course_id
+        - enrollment_date
+        - last_active
+        - completion_percentage
+        - lesson_progress
+      properties:
+        user_id:
+          type: string
+          description: User ID
+          example: "user_12345"
+        course_id:
+          type: string
+          description: Course ID
+          example: "course_001"
+        enrollment_date:
+          type: string
+          format: date-time
+          description: When user enrolled
+          example: "2024-01-15T10:30:00Z"
+        last_active:
+          type: string
+          format: date-time
+          description: Last activity timestamp
+          example: "2024-01-22T14:45:00Z"
+        completion_percentage:
+          type: number
+          format: float
+          minimum: 0
+          maximum: 100
+          description: Overall completion percentage
+          example: 40.0
+        recent_lessons:
+          type: array
+          items:
+            type: string
+          maxItems: 10
+          description: IDs of recently viewed lessons (FIFO)
+          example: ["lesson_006", "lesson_005", "lesson_004"]
+        lesson_progress:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/LessonProgress'
+          description: Progress per lesson (keyed by lesson_id)
+    
+    LessonProgress:
+      type: object
+      required:
+        - lesson_id
+        - completed
+        - time_spent_seconds
+      properties:
+        lesson_id:
+          type: string
+          description: Lesson ID
+          example: "lesson_001"
+        completed:
+          type: boolean
+          description: Whether lesson is completed
+          example: true
+        completed_at:
+          type: string
+          format: date-time
+          nullable: true
+          description: Completion timestamp
+          example: "2024-01-16T12:00:00Z"
+        quiz_score:
+          type: integer
+          minimum: 0
+          maximum: 100
+          nullable: true
+          description: Quiz score percentage
+          example: 85
+        exercise_submitted:
+          type: boolean
+          default: false
+          description: Whether coding exercise was submitted
+          example: false
+        time_spent_seconds:
+          type: integer
+          minimum: 0
+          description: Time spent on lesson
+          example: 1800
+    
+    LessonProgressUpdate:
+      type: object
+      required:
+        - completed
+      properties:
+        completed:
+          type: boolean
+          description: Mark lesson as completed
+          example: true
+        quiz_score:
+          type: integer
+          minimum: 0
+          maximum: 100
+          nullable: true
+          description: Quiz score (if quiz lesson)
+          example: 85
+        exercise_submitted:
+          type: boolean
+          default: false
+          description: Exercise submission status
+          example: true
+        time_spent_seconds:
+          type: integer
+          minimum: 0
+          description: Time spent on this session
+          example: 600
+    
+    Error:
+      type: object
+      required:
+        - error
+        - detail
+      properties:
+        error:
+          type: string
+          description: Error type
+          example: "Not Found"
+        detail:
+          type: string
+          description: Detailed error message
+          example: "Learning path not found"
+        request_id:
+          type: string
+          description: Request ID for debugging
+          example: "550e8400-e29b-41d4-a716-446655440000"
+  
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token obtained from /auth/login endpoint.
+        Include in Authorization header as: Bearer <token>
+
+security:
+  - BearerAuth: []

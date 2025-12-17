@@ -1,0 +1,418 @@
+openapi: 3.0.3
+info:
+  title: MenTora Courses API
+  description: API endpoints for course search, filtering, and recommendations
+  version: 1.0.0
+  contact:
+    name: MenTora API Support
+
+servers:
+  - url: https://mentora-api.azurewebsites.net/api/v1
+    description: Production server
+  - url: http://localhost:8000/api/v1
+    description: Local development server
+
+tags:
+  - name: courses
+    description: Course catalog and search operations
+  - name: recommendations
+    description: Course recommendation engine
+
+paths:
+  /courses/search:
+    get:
+      tags:
+        - courses
+      summary: Search and filter courses with pagination
+      description: |
+        Retrieve courses matching specified filters with cursor-based pagination
+        for infinite scroll. Supports filtering by category, difficulty, text search,
+        and tags. Returns up to 20 courses per page.
+      operationId: searchCourses
+      parameters:
+        - name: category
+          in: query
+          description: Filter by course category (case-sensitive)
+          required: false
+          schema:
+            type: string
+            maxLength: 100
+            example: "AI"
+        
+        - name: difficulty
+          in: query
+          description: Filter by difficulty level
+          required: false
+          schema:
+            type: string
+            enum: [Beginner, Intermediate, Advanced]
+            example: "Beginner"
+        
+        - name: search_query
+          in: query
+          description: Text search in course title and description (min 2 chars)
+          required: false
+          schema:
+            type: string
+            minLength: 2
+            maxLength: 200
+            example: "machine learning"
+        
+        - name: tag
+          in: query
+          description: Filter by single tag
+          required: false
+          schema:
+            type: string
+            maxLength: 50
+            example: "python"
+        
+        - name: cursor
+          in: query
+          description: Continuation token from previous response (for pagination)
+          required: false
+          schema:
+            type: string
+            example: "g1AAAAG3eJzLYWBg4M..."
+        
+        - name: page_size
+          in: query
+          description: Number of results per page (default 20, max 50)
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 50
+            default: 20
+            example: 20
+      
+      responses:
+        '200':
+          description: Successfully retrieved courses
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CourseSearchResult'
+              example:
+                courses:
+                  - id: "course_001"
+                    title: "Introduction to Machine Learning"
+                    slug: "intro-ml"
+                    category: "AI"
+                    difficulty: "Beginner"
+                    description: "Learn the fundamentals of machine learning"
+                    enrollment_count: 1250
+                    thumbnail_url: "https://cdn.mentora.com/thumbnails/intro-ml.jpg"
+                    estimated_hours: 8.5
+                    tags: ["python", "ml", "beginner"]
+                    created_by: "admin@mentora.com"
+                    created_at: "2024-01-15T10:30:00Z"
+                next_cursor: "g1AAAAG3eJzLYWBg4M..."
+                total_count: 150
+                has_more: true
+        
+        '400':
+          description: Invalid request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Validation Error"
+                detail: "search_query must be at least 2 characters"
+        
+        '401':
+          description: Unauthorized - JWT token missing or invalid
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /courses/{course_id}:
+    get:
+      tags:
+        - courses
+      summary: Get course details by ID
+      description: Retrieve full details for a specific course including modules and lessons
+      operationId: getCourseById
+      parameters:
+        - name: course_id
+          in: path
+          description: Course ID
+          required: true
+          schema:
+            type: string
+            example: "course_001"
+      
+      responses:
+        '200':
+          description: Course details retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Course'
+        
+        '404':
+          description: Course not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Not Found"
+                detail: "Course with ID 'course_001' does not exist"
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /courses/recommendations:
+    get:
+      tags:
+        - recommendations
+      summary: Get course recommendations
+      description: |
+        Retrieve personalized course recommendations based on user's enrollment
+        history and selected category. Uses category-based filtering as specified
+        in clarifications (not collaborative filtering).
+      operationId: getRecommendations
+      parameters:
+        - name: category
+          in: query
+          description: Filter recommendations by category
+          required: false
+          schema:
+            type: string
+            maxLength: 100
+            example: "AI"
+        
+        - name: limit
+          in: query
+          description: Maximum number of recommendations to return
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 20
+            default: 5
+            example: 5
+      
+      responses:
+        '200':
+          description: Recommendations retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  recommendations:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/Course'
+                  reason:
+                    type: string
+                    description: Explanation for recommendation logic
+                    example: "Based on your interest in AI courses"
+              example:
+                recommendations:
+                  - id: "course_002"
+                    title: "Advanced Neural Networks"
+                    category: "AI"
+                    difficulty: "Advanced"
+                    enrollment_count: 850
+                reason: "Popular AI courses for users with similar interests"
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+  /courses/categories:
+    get:
+      tags:
+        - courses
+      summary: List all course categories
+      description: Retrieve unique course categories for filter UI
+      operationId: listCategories
+      responses:
+        '200':
+          description: Categories retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  categories:
+                    type: array
+                    items:
+                      type: string
+                    example: ["AI", "Web Development", "Data Science", "Cloud"]
+        
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+
+components:
+  schemas:
+    Course:
+      type: object
+      required:
+        - id
+        - title
+        - slug
+        - category
+        - difficulty
+        - description
+        - created_by
+        - created_at
+      properties:
+        id:
+          type: string
+          description: Unique course identifier
+          example: "course_001"
+        title:
+          type: string
+          maxLength: 200
+          description: Course title
+          example: "Introduction to Machine Learning"
+        slug:
+          type: string
+          pattern: '^[a-z0-9-]+$'
+          description: URL-friendly slug
+          example: "intro-ml"
+        category:
+          type: string
+          maxLength: 100
+          description: Course category
+          example: "AI"
+        difficulty:
+          type: string
+          enum: [Beginner, Intermediate, Advanced]
+          description: Course difficulty level
+          example: "Beginner"
+        description:
+          type: string
+          maxLength: 2000
+          description: Course description
+          example: "Learn the fundamentals of machine learning"
+        enrollment_count:
+          type: integer
+          minimum: 0
+          default: 0
+          description: Total user enrollments
+          example: 1250
+        thumbnail_url:
+          type: string
+          format: uri
+          nullable: true
+          description: Course thumbnail image URL
+          example: "https://cdn.mentora.com/thumbnails/intro-ml.jpg"
+        estimated_hours:
+          type: number
+          format: float
+          minimum: 0.5
+          maximum: 500
+          nullable: true
+          description: Estimated completion time in hours
+          example: 8.5
+        tags:
+          type: array
+          items:
+            type: string
+            maxLength: 50
+          description: Search tags
+          example: ["python", "ml", "beginner"]
+        created_by:
+          type: string
+          description: Creator email
+          example: "admin@mentora.com"
+        created_at:
+          type: string
+          format: date-time
+          description: Creation timestamp
+          example: "2024-01-15T10:30:00Z"
+    
+    CourseSearchResult:
+      type: object
+      required:
+        - courses
+        - has_more
+      properties:
+        courses:
+          type: array
+          items:
+            $ref: '#/components/schemas/Course'
+          description: List of courses matching filters
+        next_cursor:
+          type: string
+          nullable: true
+          description: Continuation token for next page (null if no more results)
+          example: "g1AAAAG3eJzLYWBg4M..."
+        total_count:
+          type: integer
+          minimum: 0
+          nullable: true
+          description: Total matching courses (only on first page)
+          example: 150
+        has_more:
+          type: boolean
+          description: Whether more results exist
+          example: true
+    
+    Error:
+      type: object
+      required:
+        - error
+        - detail
+      properties:
+        error:
+          type: string
+          description: Error type
+          example: "Validation Error"
+        detail:
+          type: string
+          description: Detailed error message
+          example: "search_query must be at least 2 characters"
+        request_id:
+          type: string
+          description: Request ID for debugging
+          example: "550e8400-e29b-41d4-a716-446655440000"
+  
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token obtained from /auth/login endpoint.
+        Include in Authorization header as: Bearer <token>
+
+security:
+  - BearerAuth: []

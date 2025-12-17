@@ -1,0 +1,638 @@
+openapi: 3.0.3
+info:
+  title: MenTora Admin DSL API
+  description: API endpoints for admin DSL parsing, preview, and sanitization
+  version: 1.0.0
+  contact:
+    name: MenTora API Support
+
+servers:
+  - url: https://mentora-api.azurewebsites.net/api/v1
+    description: Production server
+  - url: http://localhost:8000/api/v1
+    description: Local development server
+
+tags:
+  - name: admin-dsl
+    description: Admin DSL operations for course creation
+
+paths:
+  /admin/dsl/parse:
+    post:
+      tags:
+        - admin-dsl
+      summary: Parse and validate DSL content
+      description: |
+        Parse raw DSL text into structured course format with validation.
+        Applies XSS sanitization using Bleach library on all text content.
+        Returns parsed structure or validation errors.
+      operationId: parseDSL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DSLParseRequest'
+            example:
+              dsl_content: |
+                COURSE: Introduction to Machine Learning
+                CATEGORY: AI
+                DIFFICULTY: Beginner
+                
+                MODULE: Foundations
+                
+                LESSON: What is Machine Learning?
+                TYPE: video
+                URL: https://www.youtube.com/watch?v=example
+                DURATION: 600
+                
+                LESSON: First Quiz
+                TYPE: quiz
+                
+                QUESTION: What is supervised learning?
+                OPTIONS:
+                  - Learning with labeled data
+                  - Learning without labels
+                  - Reinforcement learning
+                CORRECT: 0
+                EXPLANATION: Supervised learning uses labeled training data.
+      
+      responses:
+        '200':
+          description: DSL parsed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DSLParseResult'
+              example:
+                success: true
+                parsed_course:
+                  title: "Introduction to Machine Learning"
+                  category: "AI"
+                  difficulty: "Beginner"
+                  modules:
+                    - title: "Foundations"
+                      order: 1
+                      lessons:
+                        - title: "What is Machine Learning?"
+                          order: 1
+                          content_type: "video"
+                          video_url: "https://www.youtube.com/watch?v=example"
+                          duration_seconds: 600
+                        - title: "First Quiz"
+                          order: 2
+                          content_type: "quiz"
+                          questions:
+                            - question: "What is supervised learning?"
+                              options:
+                                - "Learning with labeled data"
+                                - "Learning without labels"
+                                - "Reinforcement learning"
+                              correct_index: 0
+                              explanation: "Supervised learning uses labeled training data."
+                warnings: []
+        
+        '400':
+          description: DSL validation errors
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DSLParseResult'
+              example:
+                success: false
+                parsed_course: null
+                errors:
+                  - line: 15
+                    message: "Invalid video URL: must be HTTPS"
+                  - line: 22
+                    message: "Quiz must have at least 2 options"
+                warnings:
+                  - line: 8
+                    message: "DURATION is optional but recommended for videos"
+        
+        '401':
+          description: Unauthorized (admin only)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '403':
+          description: Forbidden (requires admin role)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+              example:
+                error: "Forbidden"
+                detail: "This endpoint requires admin privileges"
+      
+      security:
+        - BearerAuth: []
+        - AdminRole: []
+
+  /admin/dsl/preview:
+    post:
+      tags:
+        - admin-dsl
+      summary: Generate sanitized HTML preview of DSL content
+      description: |
+        Parse DSL and return HTML preview with XSS sanitization applied.
+        Used in admin interface to show how course will render to students.
+        Applies Bleach sanitization with allowed HTML tags.
+      operationId: previewDSL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DSLParseRequest'
+            example:
+              dsl_content: |
+                COURSE: Test Course
+                
+                MODULE: Module 1
+                
+                LESSON: Text Lesson
+                TYPE: text
+                CONTENT:
+                  This is **bold** and this is *italic*.
+                  Here's a [link](https://example.com).
+      
+      responses:
+        '200':
+          description: Preview generated successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DSLPreviewResult'
+              example:
+                success: true
+                preview_html: |
+                  <div class="course-preview">
+                    <h1>Test Course</h1>
+                    <div class="module">
+                      <h2>Module 1</h2>
+                      <div class="lesson">
+                        <h3>Text Lesson</h3>
+                        <div class="content">
+                          <p>This is <strong>bold</strong> and this is <em>italic</em>.</p>
+                          <p>Here's a <a href="https://example.com">link</a>.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                sanitization_log:
+                  - "Removed script tag from line 12"
+                  - "Sanitized href attribute on line 15"
+        
+        '400':
+          description: DSL parsing error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DSLPreviewResult'
+              example:
+                success: false
+                preview_html: null
+                errors:
+                  - "Failed to parse DSL: Invalid syntax on line 8"
+        
+        '401':
+          description: Unauthorized (admin only)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '403':
+          description: Forbidden (requires admin role)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+        - AdminRole: []
+
+  /admin/dsl/sanitize:
+    post:
+      tags:
+        - admin-dsl
+      summary: Sanitize raw HTML/markdown content
+      description: |
+        Apply XSS sanitization to arbitrary HTML/markdown content using Bleach.
+        Returns sanitized content with log of removed/modified elements.
+        Useful for testing sanitization rules before full DSL parsing.
+      operationId: sanitizeContent
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - raw_content
+              properties:
+                raw_content:
+                  type: string
+                  maxLength: 50000
+                  description: Raw HTML/markdown to sanitize
+                  example: |
+                    <p>Safe content</p>
+                    <script>alert('XSS')</script>
+                    <a href="javascript:alert('XSS')">Link</a>
+                content_type:
+                  type: string
+                  enum: [html, markdown]
+                  default: html
+                  description: Content type for appropriate sanitization rules
+      
+      responses:
+        '200':
+          description: Content sanitized successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - sanitized_content
+                  - removed_elements
+                properties:
+                  sanitized_content:
+                    type: string
+                    description: Sanitized content
+                    example: |
+                      <p>Safe content</p>
+                      <a>Link</a>
+                  removed_elements:
+                    type: array
+                    items:
+                      type: string
+                    description: List of removed/modified elements
+                    example:
+                      - "Removed script tag"
+                      - "Removed javascript: protocol from href"
+                  allowed_tags:
+                    type: array
+                    items:
+                      type: string
+                    description: Tags allowed by current sanitization policy
+                    example: ["p", "strong", "em", "a", "ul", "ol", "li", "code", "pre"]
+        
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '401':
+          description: Unauthorized (admin only)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '403':
+          description: Forbidden (requires admin role)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+        - AdminRole: []
+
+  /admin/dsl/validate-video:
+    post:
+      tags:
+        - admin-dsl
+      summary: Validate video URL
+      description: |
+        Check if video URL is from allowed domain (YouTube, Vimeo) and uses HTTPS.
+        Returns validation result with metadata if URL is valid.
+      operationId: validateVideoURL
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - video_url
+              properties:
+                video_url:
+                  type: string
+                  format: uri
+                  description: Video URL to validate
+                  example: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      
+      responses:
+        '200':
+          description: URL validation result
+          content:
+            application/json:
+              schema:
+                type: object
+                required:
+                  - valid
+                  - url
+                properties:
+                  valid:
+                    type: boolean
+                    description: Whether URL is valid
+                    example: true
+                  url:
+                    type: string
+                    description: Sanitized URL
+                    example: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                  domain:
+                    type: string
+                    description: Video platform domain
+                    example: "youtube.com"
+                  embed_url:
+                    type: string
+                    nullable: true
+                    description: Embeddable iframe URL (if applicable)
+                    example: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  errors:
+                    type: array
+                    items:
+                      type: string
+                    description: Validation errors (if invalid)
+                    example: []
+              examples:
+                valid_youtube:
+                  summary: Valid YouTube URL
+                  value:
+                    valid: true
+                    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    domain: "youtube.com"
+                    embed_url: "https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    errors: []
+                
+                invalid_domain:
+                  summary: Invalid domain
+                  value:
+                    valid: false
+                    url: "https://badsite.com/video"
+                    domain: "badsite.com"
+                    embed_url: null
+                    errors: ["Video domain not allowed: badsite.com"]
+                
+                invalid_protocol:
+                  summary: HTTP instead of HTTPS
+                  value:
+                    valid: false
+                    url: "http://www.youtube.com/watch?v=dQw4w9WgXcQ"
+                    domain: "youtube.com"
+                    embed_url: null
+                    errors: ["Video URLs must use HTTPS"]
+        
+        '400':
+          description: Invalid request
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '401':
+          description: Unauthorized (admin only)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        
+        '403':
+          description: Forbidden (requires admin role)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+      
+      security:
+        - BearerAuth: []
+        - AdminRole: []
+
+components:
+  schemas:
+    DSLParseRequest:
+      type: object
+      required:
+        - dsl_content
+      properties:
+        dsl_content:
+          type: string
+          maxLength: 100000
+          description: Raw DSL text to parse
+          example: |
+            COURSE: Introduction to Python
+            CATEGORY: Programming
+            DIFFICULTY: Beginner
+    
+    DSLParseResult:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+          description: Whether parsing succeeded
+          example: true
+        parsed_course:
+          type: object
+          nullable: true
+          description: Parsed course structure (null if errors)
+          properties:
+            title:
+              type: string
+              example: "Introduction to Python"
+            category:
+              type: string
+              example: "Programming"
+            difficulty:
+              type: string
+              enum: [Beginner, Intermediate, Advanced]
+              example: "Beginner"
+            modules:
+              type: array
+              items:
+                $ref: '#/components/schemas/ParsedModule'
+        errors:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParseError'
+          description: Parsing/validation errors
+          example: []
+        warnings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParseWarning'
+          description: Non-critical warnings
+          example: []
+    
+    ParsedModule:
+      type: object
+      required:
+        - title
+        - order
+        - lessons
+      properties:
+        title:
+          type: string
+          maxLength: 200
+          example: "Foundations"
+        order:
+          type: integer
+          minimum: 1
+          example: 1
+        lessons:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParsedLesson'
+    
+    ParsedLesson:
+      type: object
+      required:
+        - title
+        - order
+        - content_type
+      properties:
+        title:
+          type: string
+          maxLength: 200
+          example: "Introduction Video"
+        order:
+          type: integer
+          minimum: 1
+          example: 1
+        content_type:
+          type: string
+          enum: [video, quiz, exercise, text]
+          example: "video"
+        video_url:
+          type: string
+          format: uri
+          nullable: true
+          description: Video URL (if content_type=video)
+          example: "https://www.youtube.com/watch?v=example"
+        duration_seconds:
+          type: integer
+          minimum: 1
+          nullable: true
+          description: Video duration
+          example: 600
+        questions:
+          type: array
+          nullable: true
+          items:
+            type: object
+          description: Quiz questions (if content_type=quiz)
+        markdown:
+          type: string
+          nullable: true
+          description: Text content (if content_type=text)
+    
+    ParseError:
+      type: object
+      required:
+        - line
+        - message
+      properties:
+        line:
+          type: integer
+          minimum: 1
+          description: Line number where error occurred
+          example: 15
+        message:
+          type: string
+          description: Error description
+          example: "Invalid video URL: must be HTTPS"
+    
+    ParseWarning:
+      type: object
+      required:
+        - line
+        - message
+      properties:
+        line:
+          type: integer
+          minimum: 1
+          description: Line number where warning occurred
+          example: 8
+        message:
+          type: string
+          description: Warning description
+          example: "DURATION is optional but recommended for videos"
+    
+    DSLPreviewResult:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+          description: Whether preview generation succeeded
+          example: true
+        preview_html:
+          type: string
+          nullable: true
+          description: Sanitized HTML preview (null if errors)
+          example: "<div class=\"course-preview\">...</div>"
+        sanitization_log:
+          type: array
+          items:
+            type: string
+          description: Log of sanitization actions
+          example:
+            - "Removed script tag from line 12"
+            - "Sanitized href attribute on line 15"
+        errors:
+          type: array
+          items:
+            type: string
+          description: Parsing errors (if any)
+          example: []
+    
+    Error:
+      type: object
+      required:
+        - error
+        - detail
+      properties:
+        error:
+          type: string
+          description: Error type
+          example: "Forbidden"
+        detail:
+          type: string
+          description: Detailed error message
+          example: "This endpoint requires admin privileges"
+        request_id:
+          type: string
+          description: Request ID for debugging
+          example: "550e8400-e29b-41d4-a716-446655440000"
+  
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token obtained from /auth/login endpoint.
+        Include in Authorization header as: Bearer <token>
+    
+    AdminRole:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: |
+        JWT token with admin role claim.
+        Token payload must include: {"role": "admin"}
+
+security:
+  - BearerAuth: []
+  - AdminRole: []
