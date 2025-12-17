@@ -156,17 +156,80 @@ GUIRA/
 
 ## 🎥 Demo & Visuals
 
-### System Architecture
-**[PLACEHOLDER: Multi-model architecture diagram showing data flow from sensors → detection → prediction → GIS visualization]**
-<!-- Add: ![Architecture](assets/diagrams/guira-arch.svg) -->
+### Multi-Modal AI Architecture
 
-### Risk Map Example
-**[PLACEHOLDER: Geospatial heat map showing fire risk zones with evacuation routes]**
-<!-- Add: ![Risk Map](assets/screenshots/guira-risk-map-01.png) -->
+```mermaid
+graph TB
+    subgraph "Data Inputs"
+        CAM[Camera Feeds<br/>Ground Sensors]
+        SAT[Satellite Imagery<br/>Sentinel-2]
+        WEATHER[Weather APIs<br/>NOAA/OpenWeather]
+        TERRAIN[DEM Data<br/>Terrain Models]
+    end
+    
+    subgraph "Detection Models"
+        YOLO[YOLOv8<br/>Fire & Smoke Detection<br/>95.7% Accuracy]
+        CSR[CSRNet<br/>Wildlife Monitoring<br/>Fauna Displacement]
+    end
+    
+    subgraph "Analysis Models"
+        TIME[TimeSFormer<br/>Temporal Analysis<br/>Video Patterns]
+        RES[ResNet50<br/>Vegetation Health<br/>Satellite Analysis]
+    end
+    
+    subgraph "Prediction Engine"
+        PHYS[Physics-Based<br/>Fire Simulation]
+        WIND[Wind & Terrain<br/>Modeling]
+        FUEL[Fuel Load<br/>Analysis]
+    end
+    
+    subgraph "Geospatial Intelligence"
+        GIS[PostGIS Database<br/>Spatial Data]
+        RISK[Risk Map<br/>Generation]
+        EVAC[Evacuation<br/>Route Planning]
+    end
+    
+    subgraph "Alert System"
+        WARN[Early Warning<br/>35min Lead Time]
+        COMM[Community<br/>Notifications]
+        DASH[Monitoring<br/>Dashboard]
+    end
+    
+    CAM --> YOLO
+    CAM --> CSR
+    SAT --> RES
+    CAM --> TIME
+    
+    YOLO --> PHYS
+    CSR --> WARN
+    TIME --> PHYS
+    RES --> FUEL
+    
+    WEATHER --> WIND
+    TERRAIN --> WIND
+    WIND --> PHYS
+    FUEL --> PHYS
+    
+    PHYS --> GIS
+    GIS --> RISK
+    RISK --> EVAC
+    
+    EVAC --> WARN
+    RISK --> WARN
+    WARN --> COMM
+    WARN --> DASH
+    
+    style YOLO fill:#FF6B6B
+    style TIME fill:#667eea
+    style PHYS fill:#FFA07A
+    style RISK fill:#8B5CF6
+    style WARN fill:#00F5FF
+```
 
-### Demo Video
-**[PLACEHOLDER: 90s demo showing fire detection → spread prediction → alert system]**
-<!-- Add: [Watch Demo](assets/videos/guira-demo-1080p.mp4) -->
+*Multi-modal architecture integrating 5 AI models for comprehensive fire prediction and prevention*
+
+### System Workflow
+**Data Collection → Detection → Analysis → Prediction → Risk Mapping → Early Warning**
 
 ---
 

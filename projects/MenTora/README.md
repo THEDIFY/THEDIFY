@@ -166,6 +166,67 @@ MenTora/
 
 *60-90s walkthroughs showing course enrollment, interactive lessons, and project completion*
 
+### PWA Architecture
+
+```mermaid
+graph TB
+    subgraph "Progressive Web App"
+        UI[React 18 + TypeScript<br/>Mobile-First Design]
+        SW[Service Workers<br/>Offline Support]
+        CACHE[Cache Storage<br/>Course Content]
+    end
+    
+    subgraph "Interactive Learning"
+        MONACO[Monaco Editor<br/>Code Environment]
+        PYODIDE[Pyodide<br/>Python in Browser]
+        TFJS[TensorFlow.js<br/>ML Models in Browser]
+        QUIZ[Quiz Engine<br/>Interactive Assessments]
+    end
+    
+    subgraph "Backend API"
+        API[FastAPI<br/>REST Endpoints]
+        AUTH[JWT Auth<br/>User Sessions]
+        RATE[Rate Limiting<br/>API Protection]
+    end
+    
+    subgraph "Data Layer"
+        PG[(PostgreSQL<br/>User Data & Progress)]
+        REDIS[(Redis<br/>Session Cache)]
+        CELERY[Celery Workers<br/>Background Tasks]
+    end
+    
+    subgraph "Payment & Analytics"
+        STRIPE[Stripe Integration<br/>Global Payments]
+        TRACK[Progress Tracking<br/>Learning Analytics]
+    end
+    
+    UI --> SW
+    SW --> CACHE
+    UI --> MONACO
+    MONACO --> PYODIDE
+    UI --> TFJS
+    UI --> QUIZ
+    
+    UI --> API
+    API --> AUTH
+    AUTH --> RATE
+    API --> PG
+    API --> REDIS
+    API --> CELERY
+    
+    API --> STRIPE
+    API --> TRACK
+    TRACK --> PG
+    
+    style UI fill:#00F5FF
+    style PYODIDE fill:#667eea
+    style TFJS fill:#8B5CF6
+    style API fill:#A855F7
+    style STRIPE fill:#00C853
+```
+
+*Progressive Web App architecture enabling offline learning and cross-platform accessibility*
+
 ---
 
 ## 📈 Impact Metrics / Results

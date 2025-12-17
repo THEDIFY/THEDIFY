@@ -125,6 +125,74 @@
 
 </details>
 
+### RAG Pipeline Architecture (Technical)
+
+```mermaid
+graph TB
+    subgraph "User Interface"
+        UI[React Frontend]
+    end
+    
+    subgraph "API Layer"
+        API[FastAPI Backend]
+    end
+    
+    subgraph "RAG Pipeline"
+        QP[Query Processing]
+        VE[Vector Embedding<br/>sentence-transformers]
+        HS[Hybrid Search<br/>Azure AI Search]
+        RR[Result Ranking]
+        CC[Context Construction]
+    end
+    
+    subgraph "LLM Generation"
+        LLM[Azure OpenAI<br/>GPT-4]
+        CT[Citation Tracking]
+        RE[Response Enhancement]
+    end
+    
+    subgraph "Data Sources"
+        VDB[(Vector Database<br/>Azure AI Search)]
+        CDB[(Cosmos DB<br/>User Profiles)]
+        CACHE[(Redis Cache)]
+    end
+    
+    subgraph "Personalization"
+        UP[User Profile]
+        LH[Learning History]
+        AP[Adaptive Path]
+    end
+    
+    UI -->|User Query| API
+    API --> QP
+    QP --> VE
+    VE --> HS
+    HS <--> VDB
+    HS --> RR
+    
+    API --> UP
+    UP <--> CDB
+    UP --> LH
+    LH --> AP
+    AP --> CC
+    
+    RR --> CC
+    CC --> LLM
+    LLM --> CT
+    CT --> RE
+    RE -->|Personalized Response| API
+    API -->|<2s latency| UI
+    
+    CACHE <--> API
+    
+    style LLM fill:#667eea
+    style VDB fill:#8B5CF6
+    style UI fill:#00F5FF
+    style RE fill:#A855F7
+```
+
+*Interactive RAG architecture showing query flow, personalization, and response generation*
+
 ### Demo Video
 - [🎓 EDIFY Study Mode Demo](assets/videos/EDIFY%20STUDY.mp4)
 - [🧠 EDIFY Tutor Mode Demo](assets/videos/EDIFY%20TUTOR.mp4)

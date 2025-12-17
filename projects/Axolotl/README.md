@@ -168,6 +168,77 @@ Axolotl/
 
 </details>
 
+### Computer Vision Pipeline Architecture
+
+```mermaid
+graph TB
+    subgraph "Input Stage"
+        VID[Video Upload<br/>60 FPS]
+        STREAM[Live Stream Feed]
+    end
+    
+    subgraph "Detection & Tracking"
+        YOLO[YOLOv8<br/>Player Detection]
+        SORT[DeepSORT<br/>Multi-Object Tracking]
+        BALL[Ball Detection<br/>Custom Model]
+    end
+    
+    subgraph "Pose & Movement"
+        MP[MediaPipe<br/>Pose Estimation]
+        LSTM[LSTM Networks<br/>Movement Prediction]
+        TRAJ[Trajectory Analysis]
+    end
+    
+    subgraph "Metrics Engine"
+        TECH[Technical Metrics<br/>Pass Accuracy, Touches]
+        PHYS[Physical Metrics<br/>Sprint Distance, Speed]
+        TACT[Tactical Metrics<br/>Positioning, Formation]
+    end
+    
+    subgraph "Data Processing"
+        QUEUE[(Redis Queue<br/>Async Processing)]
+        DB[(PostgreSQL<br/>Metrics Storage)]
+        CACHE[(Redis Cache)]
+    end
+    
+    subgraph "Visualization"
+        HEAT[Heat Maps]
+        CHARTS[Performance Charts]
+        DASH[Interactive Dashboard<br/>React + D3.js]
+    end
+    
+    VID --> YOLO
+    STREAM --> YOLO
+    YOLO --> SORT
+    YOLO --> BALL
+    SORT --> MP
+    MP --> LSTM
+    LSTM --> TRAJ
+    
+    SORT --> TECH
+    TRAJ --> PHYS
+    MP --> TACT
+    
+    TECH --> QUEUE
+    PHYS --> QUEUE
+    TACT --> QUEUE
+    
+    QUEUE --> DB
+    DB --> CACHE
+    
+    CACHE --> HEAT
+    CACHE --> CHARTS
+    HEAT --> DASH
+    CHARTS --> DASH
+    
+    style YOLO fill:#8B5CF6
+    style MP fill:#667eea
+    style DASH fill:#00F5FF
+    style QUEUE fill:#A855F7
+```
+
+*Real-time computer vision pipeline processing at 28 FPS with GPU acceleration*
+
 ---
 
 ## 📈 Impact Metrics / Results
