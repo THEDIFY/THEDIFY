@@ -119,212 +119,45 @@ class THEDIFY:
 
 <div align="center">
 
-### 🏛️ **Hierarchical Innovation Map**
-
 ```mermaid
 graph TB
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% CORE IDENTITY
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    ROOT[<b>SANTIAGO</b><br/>🎓 Founder & CEO - EDIFY<br/>🧠 AI Innovation Architect]
+    ROOT[<b>SANTIAGO</b><br/>Founder & CEO - EDIFY<br/>AI Innovation Architect]
     
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% MAIN BRANCHES
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    ROOT --> PROJECTS[<b>🚀 FLAGSHIP PROJECTS</b>]
-    ROOT --> TECH[<b>⚙️ TECHNICAL EXPERTISE</b>]
-    ROOT --> MISSION[<b>🌍 CORE MISSION</b>]
-    ROOT --> SKILLS[<b>💡 SPECIALIZED SKILLS</b>]
+    ROOT --> PROJECTS[🚀 Projects]
+    ROOT --> TECH[⚙️ Tech Stack]
+    ROOT --> MISSION[🌍 Mission]
     
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% PROJECTS BRANCH - DETAILED HIERARCHY
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    PROJECTS --> EDIFY[<b>EDIFY</b><br/>🎓 Enterprise AI Education]
-    PROJECTS --> AXOLOTL[<b>Axolotl</b><br/>⚽ Sports Analytics]
-    PROJECTS --> GUIRA[<b>GUIRA</b><br/>🔥 Fire Prevention]
-    PROJECTS --> MENTORA[<b>MenTora</b><br/>📱 EdTech PWA]
+    PROJECTS --> EDIFY[EDIFY<br/>AI Education]
+    PROJECTS --> AXOLOTL[Axolotl<br/>Sports Analytics]
+    PROJECTS --> GUIRA[GUIRA<br/>Fire Prevention]
+    PROJECTS --> MENTORA[MenTora<br/>EdTech PWA]
     
-    %% EDIFY Sub-branches
-    EDIFY --> EDIFY_TECH[<b>Technical Innovation</b>]
-    EDIFY --> EDIFY_IMPACT[<b>Impact & Scale</b>]
-    EDIFY --> EDIFY_FEATURES[<b>Core Features</b>]
+    TECH --> AI[AI/ML<br/>RAG • CV • LLMs]
+    TECH --> CLOUD[Cloud<br/>Azure • Docker]
+    TECH --> CODE[Development<br/>Python • React • TS]
     
-    EDIFY_TECH --> EDIFY_RAG[Novel RAG<br/>Algorithm]
-    EDIFY_TECH --> EDIFY_SEARCH[Hybrid Vector<br/>Search]
-    EDIFY_TECH --> EDIFY_ARCH[Azure Cloud<br/>Architecture]
+    MISSION --> EQUAL[Equal Access<br/>Same Starting Line]
+    MISSION --> IMPACT[Social Impact<br/>Education • Safety]
+    MISSION --> OPEN[Open Knowledge<br/>Collaboration]
     
-    EDIFY_IMPACT --> EDIFY_USERS[1000+ Active<br/>Users]
-    EDIFY_IMPACT --> EDIFY_PERF[Sub-2s Response<br/>Latency]
-    EDIFY_IMPACT --> EDIFY_SCALE[Enterprise-Ready<br/>10K Concurrent]
+    style ROOT fill:#00F5FF,stroke:#0099CC,stroke-width:4px,color:#000,font-weight:bold
+    style PROJECTS fill:#667eea,stroke:#5568D3,stroke-width:3px,color:#fff,font-weight:bold
+    style TECH fill:#8B5CF6,stroke:#7C3AED,stroke-width:3px,color:#fff,font-weight:bold
+    style MISSION fill:#A855F7,stroke:#9333EA,stroke-width:3px,color:#fff,font-weight:bold
     
-    EDIFY_FEATURES --> EDIFY_PERSONAL[Personalized<br/>Learning Paths]
-    EDIFY_FEATURES --> EDIFY_CITATIONS[Smart Source<br/>Citations]
-    EDIFY_FEATURES --> EDIFY_CONTEXT[Multi-turn<br/>Conversations]
+    style EDIFY fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style AXOLOTL fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style GUIRA fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
+    style MENTORA fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
     
-    %% AXOLOTL Sub-branches
-    AXOLOTL --> AXO_CV[<b>Computer Vision</b>]
-    AXOLOTL --> AXO_ANALYTICS[<b>Analytics Engine</b>]
-    AXOLOTL --> AXO_INFRA[<b>Infrastructure</b>]
+    style AI fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
+    style CLOUD fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
+    style CODE fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
     
-    AXO_CV --> AXO_DETECT[YOLOv8<br/>Detection]
-    AXO_CV --> AXO_TRACK[DeepSORT<br/>Tracking]
-    AXO_CV --> AXO_POSE[MediaPipe<br/>Pose Analysis]
-    
-    AXO_ANALYTICS --> AXO_TECH[Technical<br/>Metrics]
-    AXO_ANALYTICS --> AXO_PHYS[Physical<br/>Performance]
-    AXO_ANALYTICS --> AXO_TACTICAL[Tactical<br/>Insights]
-    
-    AXO_INFRA --> AXO_GPU[GPU Acceleration<br/>CUDA 11.8]
-    AXO_INFRA --> AXO_MICRO[Microservices<br/>Docker]
-    AXO_INFRA --> AXO_QUEUE[Async Processing<br/>Redis + Celery]
-    
-    %% GUIRA Sub-branches
-    GUIRA --> GUIRA_AI[<b>Multi-Modal AI</b>]
-    GUIRA --> GUIRA_GIS[<b>Geospatial Intelligence</b>]
-    GUIRA --> GUIRA_PREDICTION[<b>Prediction System</b>]
-    
-    GUIRA_AI --> GUIRA_FIRE[YOLOv8<br/>Fire Detection]
-    GUIRA_AI --> GUIRA_SMOKE[YOLOv8<br/>Smoke Detection]
-    GUIRA_AI --> GUIRA_TEMPORAL[TimeSFormer<br/>Video Analysis]
-    GUIRA_AI --> GUIRA_CROWD[CSRNet<br/>Crowd Density]
-    
-    GUIRA_GIS --> GUIRA_GDAL[GDAL 3.8<br/>Processing]
-    GUIRA_GIS --> GUIRA_POSTGIS[PostGIS<br/>Database]
-    GUIRA_GIS --> GUIRA_MAPS[Risk Heat<br/>Mapping]
-    
-    GUIRA_PREDICTION --> GUIRA_PHYSICS[Physics-Based<br/>Simulation]
-    GUIRA_PREDICTION --> GUIRA_SPREAD[Fire Spread<br/>Modeling]
-    GUIRA_PREDICTION --> GUIRA_WARNING[Early Warning<br/>35min Lead]
-    
-    %% MENTORA Sub-branches
-    MENTORA --> MENTORA_PWA[<b>Progressive Web App</b>]
-    MENTORA --> MENTORA_EDU[<b>Education Platform</b>]
-    MENTORA --> MENTORA_STACK[<b>Tech Stack</b>]
-    
-    MENTORA_PWA --> MENTORA_OFFLINE[Offline-First<br/>Design]
-    MENTORA_PWA --> MENTORA_MOBILE[Mobile-Optimized<br/>UX]
-    MENTORA_PWA --> MENTORA_ACCESS[Cross-Platform<br/>Access]
-    
-    MENTORA_EDU --> MENTORA_CURRIC[AI/ML<br/>Curriculum]
-    MENTORA_EDU --> MENTORA_INTERACTIVE[Interactive<br/>Learning]
-    MENTORA_EDU --> MENTORA_PROGRESS[Progress<br/>Tracking]
-    
-    MENTORA_STACK --> MENTORA_FRONT[React 18<br/>TypeScript]
-    MENTORA_STACK --> MENTORA_BACK[FastAPI<br/>Python]
-    MENTORA_STACK --> MENTORA_PAY[Stripe<br/>Payments]
-    
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% TECH EXPERTISE BRANCH
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    TECH --> TECH_AI[<b>AI/ML Mastery</b>]
-    TECH --> TECH_CLOUD[<b>Cloud Platforms</b>]
-    TECH --> TECH_BACKEND[<b>Backend Engineering</b>]
-    TECH --> TECH_FRONTEND[<b>Frontend Development</b>]
-    
-    TECH_AI --> TECH_LLM[LLM Fine-tuning<br/>RAG Systems]
-    TECH_AI --> TECH_CV[Computer Vision<br/>YOLOv8/DeepSORT]
-    TECH_AI --> TECH_FRAMEWORKS[PyTorch<br/>TensorFlow]
-    TECH_AI --> TECH_AGENTS[AI Agents<br/>Orchestration]
-    
-    TECH_CLOUD --> TECH_AZURE[Azure OpenAI<br/>AI Search]
-    TECH_CLOUD --> TECH_COSMOS[Cosmos DB<br/>NoSQL]
-    TECH_CLOUD --> TECH_DEVOPS[Docker<br/>Microservices]
-    
-    TECH_BACKEND --> TECH_PYTHON[Python 3.11+<br/>Expert]
-    TECH_BACKEND --> TECH_FASTAPI[FastAPI<br/>Flask]
-    TECH_BACKEND --> TECH_DB[PostgreSQL<br/>Redis]
-    
-    TECH_FRONTEND --> TECH_REACT[React 18<br/>Hooks]
-    TECH_FRONTEND --> TECH_TS[TypeScript<br/>Advanced]
-    TECH_FRONTEND --> TECH_PWA[PWA<br/>Development]
-    
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% SKILLS BRANCH
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    SKILLS --> SKILL_RESEARCH[<b>Research & Innovation</b>]
-    SKILLS --> SKILL_ARCH[<b>Architecture Design</b>]
-    SKILLS --> SKILL_PROD[<b>Production Systems</b>]
-    
-    SKILL_RESEARCH --> SKILL_RAG[Novel RAG<br/>Techniques]
-    SKILL_RESEARCH --> SKILL_MULTIMODAL[Multi-Modal<br/>AI Systems]
-    SKILL_RESEARCH --> SKILL_OPTIMIZATION[Performance<br/>Optimization]
-    
-    SKILL_ARCH --> SKILL_SCALABLE[Scalable<br/>Architecture]
-    SKILL_ARCH --> SKILL_MICROSERV[Microservices<br/>Patterns]
-    SKILL_ARCH --> SKILL_DESIGN[System Design<br/>Trade-offs]
-    
-    SKILL_PROD --> SKILL_MLOPS[MLOps<br/>Pipelines]
-    SKILL_PROD --> SKILL_MONITORING[Monitoring<br/>Observability]
-    SKILL_PROD --> SKILL_CICD[CI/CD<br/>Automation]
-    
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% MISSION BRANCH
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    MISSION --> MISSION_EQUAL[<b>Equal Opportunities</b>]
-    MISSION --> MISSION_IMPACT[<b>Social Impact</b>]
-    MISSION --> MISSION_OPEN[<b>Open Knowledge</b>]
-    
-    MISSION_EQUAL --> MISSION_STARTING[Same Starting<br/>Line Philosophy]
-    MISSION_EQUAL --> MISSION_ACCESS[Democratized<br/>Access]
-    MISSION_EQUAL --> MISSION_EMPOWER[Empowerment<br/>Through Tech]
-    
-    MISSION_IMPACT --> MISSION_EDU[Education<br/>Transformation]
-    MISSION_IMPACT --> MISSION_COMMUNITY[Community<br/>Protection]
-    MISSION_IMPACT --> MISSION_ATHLETE[Athlete<br/>Empowerment]
-    
-    MISSION_OPEN --> MISSION_SOURCE[Open Source<br/>Contribution]
-    MISSION_OPEN --> MISSION_SHARING[Knowledge<br/>Sharing]
-    MISSION_OPEN --> MISSION_COLLAB[Collaborative<br/>Innovation]
-    
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    %% STYLING - HIERARCHICAL COLOR SCHEME
-    %% ═══════════════════════════════════════════════════════════════════════════════════
-    
-    %% Root & Main Branches
-    style ROOT fill:#00F5FF,stroke:#0099CC,stroke-width:5px,color:#000,font-weight:bold,font-size:16px
-    style PROJECTS fill:#667eea,stroke:#5568D3,stroke-width:4px,color:#fff,font-weight:bold
-    style TECH fill:#8B5CF6,stroke:#7C3AED,stroke-width:4px,color:#fff,font-weight:bold
-    style MISSION fill:#A855F7,stroke:#9333EA,stroke-width:4px,color:#fff,font-weight:bold
-    style SKILLS fill:#C084FC,stroke:#A855F7,stroke-width:4px,color:#fff,font-weight:bold
-    
-    %% Projects - Level 2
-    style EDIFY fill:#4338CA,stroke:#667eea,stroke-width:3px,color:#fff,font-weight:bold
-    style AXOLOTL fill:#4338CA,stroke:#667eea,stroke-width:3px,color:#fff,font-weight:bold
-    style GUIRA fill:#4338CA,stroke:#667eea,stroke-width:3px,color:#fff,font-weight:bold
-    style MENTORA fill:#4338CA,stroke:#667eea,stroke-width:3px,color:#fff,font-weight:bold
-    
-    %% Projects - Level 3
-    style EDIFY_TECH fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style EDIFY_IMPACT fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style EDIFY_FEATURES fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style AXO_CV fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style AXO_ANALYTICS fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style AXO_INFRA fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style GUIRA_AI fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style GUIRA_GIS fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style GUIRA_PREDICTION fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style MENTORA_PWA fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style MENTORA_EDU fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    style MENTORA_STACK fill:#312E81,stroke:#4338CA,stroke-width:2px,color:#fff
-    
-    %% Tech - Level 2
-    style TECH_AI fill:#6D28D9,stroke:#8B5CF6,stroke-width:3px,color:#fff,font-weight:bold
-    style TECH_CLOUD fill:#6D28D9,stroke:#8B5CF6,stroke-width:3px,color:#fff,font-weight:bold
-    style TECH_BACKEND fill:#6D28D9,stroke:#8B5CF6,stroke-width:3px,color:#fff,font-weight:bold
-    style TECH_FRONTEND fill:#6D28D9,stroke:#8B5CF6,stroke-width:3px,color:#fff,font-weight:bold
-    
-    %% Skills - Level 2
-    style SKILL_RESEARCH fill:#9333EA,stroke:#C084FC,stroke-width:3px,color:#fff,font-weight:bold
-    style SKILL_ARCH fill:#9333EA,stroke:#C084FC,stroke-width:3px,color:#fff,font-weight:bold
-    style SKILL_PROD fill:#9333EA,stroke:#C084FC,stroke-width:3px,color:#fff,font-weight:bold
-    
-    %% Mission - Level 2
-    style MISSION_EQUAL fill:#7E22CE,stroke:#A855F7,stroke-width:3px,color:#fff,font-weight:bold
-    style MISSION_IMPACT fill:#7E22CE,stroke:#A855F7,stroke-width:3px,color:#fff,font-weight:bold
-    style MISSION_OPEN fill:#7E22CE,stroke:#A855F7,stroke-width:3px,color:#fff,font-weight:bold
+    style EQUAL fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style IMPACT fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style OPEN fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
 ```
-
-> **Visual Guide**: This hierarchical map showcases the structured layers of expertise, projects, and mission-driven innovation. Each branch represents a distinct competency area, with detailed sub-branches demonstrating depth and specialization.
 
 </div>
 
