@@ -359,7 +359,7 @@ graph TB
 **Enterprise AI Education Platform**
 
 🧠 Novel RAG Technique  
-⚡ 1K+ Users | Sub-2s Latency  
+⚡ 100+ Users | Sub-2s Latency  
 🎯 Personalized Learning
 
 <a href="./projects/EDIFY/README.md">Full Details</a> | <a href="./projects/EDIFY/ABSTRACT.md">Abstract</a> | <a href="./projects/EDIFY/STATUS.md">Status</a>
@@ -1105,7 +1105,7 @@ the journey of innovation always starts with a single line on paper.*
 
 | 🏆 Achievement | 📝 Details |
 |:---:|:---|
-| **🚀 Founder & CEO** | Created EDIFY - Enterprise AI education platform serving 1k+ users |
+| **🚀 Founder & CEO** | Created EDIFY - Enterprise AI education platform serving 100+ users |
 | **🔬 RAG Innovation** | Pioneered novel retrieval technique for personalized learning |
 | **⚡ Enterprise Scale** | Built production system with sub-2s latency, 99.9% uptime |
 | **🎯 Multi-Modal AI** | Integrated 5+ specialized models (YOLO, TimeSFormer, ResNet, CSRNet) |
