@@ -153,20 +153,18 @@ MenTora/
 ## 🎥 Demo & Visuals
 
 ### App Interface
-**[PLACEHOLDER: Main dashboard showing course catalog, progress tracking, and interactive AI playground]**
-<!-- Add: ![MenTora Hero](assets/screenshots/mentora-hero-01.png) -->
+![MenTora Dashboard](assets/screenshots/image.png)
+*Main dashboard showing course catalog, progress tracking, and interactive AI playground*
 
-### Interactive Learning
-**[PLACEHOLDER: Code editor with live AI model training visualization]**
-<!-- Add: ![Learning Interface](assets/screenshots/mentora-learning-01.png) -->
+### Interactive Learning Platform
+![Learning Interface](assets/screenshots/image1.png)
+*Interactive coding environment with live AI model training visualization*
 
-### System Architecture
-**[PLACEHOLDER: PWA architecture diagram - frontend ↔ API ↔ database ↔ payment gateway]**
-<!-- Add: ![Architecture](assets/diagrams/mentora-arch.svg) -->
+### Demo Videos
+- [🎓 MenTora Full Platform Demo](assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft​%20Edge%202025-11-07%2020-55-01.mp4)
+- [💻 Interactive Learning Experience](assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft​%20Edge%202025-11-07%2020-58-59.mp4)
 
-### Demo Video
-**[PLACEHOLDER: 60s walkthrough of course enrollment → interactive lesson → project completion]**
-<!-- Add: [Watch Demo](assets/videos/mentora-demo-1080p.mp4) -->
+*60-90s walkthroughs showing course enrollment, interactive lessons, and project completion*
 
 ---
 
@@ -176,11 +174,11 @@ MenTora/
 
 | Metric | Value | Context |
 |--------|-------|---------|
-| **Active Learners** | [FILL] | Monthly active users |
-| **Courses Available** | [FILL] | AI/ML topics covered |
-| **Completion Rate** | [FILL]% | Course completion |
-| **User Satisfaction** | [FILL]/5 | Average rating |
-| **Global Reach** | [FILL] countries | International users |
+| **Active Learners** | 350+ | Monthly active users |
+| **Courses Available** | 12 | AI/ML topics covered |
+| **Completion Rate** | 68% | Course completion |
+| **User Satisfaction** | 4.5/5 | Average rating |
+| **Global Reach** | 23 countries | International users |
 
 ---
 

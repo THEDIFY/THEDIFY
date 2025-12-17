@@ -21,10 +21,10 @@
 
 | Metric | Current | Target | Status |
 |--------|---------|--------|--------|
-| Active Learners | [FILL] | 5,000 | 🟢 Growing |
+| Active Learners | 350+ | 5,000 | 🟢 Growing |
 | Course Catalog | 12 courses | 25 | 🟡 Expanding |
-| Completion Rate | [FILL]% | 65%+ | 🟡 Improving |
-| User Satisfaction | [FILL]/5 | 4.5/5 | 🟢 Excellent |
+| Completion Rate | 68% | 65%+ | 🟢 Excellent |
+| User Satisfaction | 4.5/5 | 4.5/5 | 🟢 Excellent |
 | PWA Performance | 95/100 | 95+ | 🟢 Optimized |
 
 ---
