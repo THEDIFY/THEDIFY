@@ -185,7 +185,16 @@ The GUIRA system integrates five specialized AI models working in concert:
 
 ### Risk Mapping & Detection
 
-> 🚧 **Visual Documentation in Development** — Fire detection and risk mapping screenshots will be added upon field deployment completion. System currently in testing phase with synthetic data validation.
+> 🚧 **Visual Documentation in Development** — Fire detection and risk mapping screenshots will be added upon field deployment completion. The system is currently in the testing phase with synthetic data validation. Architecture diagrams and model performance visualizations are available in the `/documentation` folder.
+
+**Conceptual System Flow:**
+```
+Sensor Data → Multi-Model Detection → Geospatial Analysis → Risk Prediction → Alert Generation
+     ↓              ↓                      ↓                    ↓                ↓
+  Cameras      Fire/Smoke AI         GIS Processing      Spread Modeling    Community Alerts
+  Weather      Vegetation AI         Terrain Mapping     Lead Time: 35min   Evacuation Routes
+  Satellite    Crowd Density         Heat Mapping        Physics Simulation  Emergency Response
+```
 
 ---
 

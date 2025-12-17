@@ -164,8 +164,8 @@ MenTora/
 
 ### Demo Videos
 
-- **[MenTora Platform Walkthrough (Part 1)](assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft​%20Edge%202025-11-07%2020-55-01.mp4)** - Course enrollment and navigation
-- **[MenTora Platform Walkthrough (Part 2)](assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft​%20Edge%202025-11-07%2020-58-59.mp4)** - Interactive lessons and project completion
+- **[MenTora Platform Walkthrough (Part 1)](assets/videos/mentora-demo-part1.mp4)** - Course enrollment and navigation
+- **[MenTora Platform Walkthrough (Part 2)](assets/videos/mentora-demo-part2.mp4)** - Interactive lessons and project completion
 
 ### System Architecture
 
