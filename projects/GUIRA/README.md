@@ -235,8 +235,6 @@ graph TB
 
 ## 📈 Impact Metrics / Results
 
-<!-- ✏️ FILL: Add validation results -->
-
 | Metric | Value | Context |
 |--------|-------|---------|
 | **Detection Accuracy** | 95.7% | Fire/smoke identification |

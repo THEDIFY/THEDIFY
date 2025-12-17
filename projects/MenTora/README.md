@@ -231,8 +231,6 @@ graph TB
 
 ## 📈 Impact Metrics / Results
 
-<!-- ✏️ FILL: Add user metrics -->
-
 | Metric | Value | Context |
 |--------|-------|---------|
 | **Active Learners** | 350+ | Monthly active users |

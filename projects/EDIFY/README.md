@@ -13,14 +13,11 @@
 
 ## 📋 TL;DR / Abstract
 
-<!-- ✏️ FILL: 1-2 sentences summarizing the novel RAG technique and impact -->
 **EDIFY** is an enterprise-scale AI education platform that pioneers a novel Retrieval-Augmented Generation (RAG) approach for personalized learning. The system adapts to individual student goals and institutional curricula, delivering sub-2-second response times while serving 1,000+ concurrent users with 99.9% uptime.
 
 ---
 
 ## 🎯 Problem Statement
-
-<!-- ✏️ FILL: 1-3 paragraphs describing the educational challenge and why personalized AI tutoring matters -->
 
 **Challenge:** Traditional education platforms fail to adapt to individual learning patterns, leading to:
 - Generic content that doesn't match student skill levels
@@ -34,8 +31,6 @@
 
 ## 💡 Key Contributions / Claims
 
-<!-- ✏️ FILL: 3-5 bullet points highlighting innovations -->
-
 - 🔬 **Novel RAG Technique:** Custom retrieval algorithm combining semantic vector search with keyword precision
 - 🎯 **Adaptive Learning Engine:** Dynamic curriculum adjustment based on real-time learner modeling
 - ⚡ **Enterprise Scale:** Production-ready architecture supporting 10,000+ concurrent learners
@@ -46,8 +41,6 @@
 
 ## 👥 Role & Team
 
-<!-- ✏️ FILL: Project lead, contributors, institutions, advisors -->
-
 **Project Lead:** Santiago (THEDIFY) — Founder & CEO  
 **Role:** Principal Architect, RAG Algorithm Designer, Full-stack Implementation  
 **Institution:** Independent Research & Development  
@@ -57,8 +50,6 @@
 ---
 
 ## 📈 Impact Metrics / Results
-
-<!-- ✏️ FILL: Quantitative metrics with baselines and comparisons -->
 
 | Metric | Value | Baseline | Improvement |
 |--------|-------|----------|-------------|
@@ -75,8 +66,6 @@
 ---
 
 ## 🛠️ Tech Stack & Dependencies
-
-<!-- ✏️ FILL: Detailed stack with versions -->
 
 **Backend:**
 - Python 3.11+
@@ -99,8 +88,6 @@
 ---
 
 ## 🎥 Demo & Visuals
-
-<!-- ✏️ FILL: Add screenshots, diagrams, videos -->
 
 ### Hero Screenshot
 ![EDIFY Dashboard](assets/screenshots/screenshot-1766006023507.png)
@@ -203,8 +190,6 @@ graph TB
 
 ## 🔬 Reproducibility
 
-<!-- ✏️ FILL: Steps to reproduce results -->
-
 **Quick Validation:** Follow the step-by-step guide in [`reproducibility/reproduce.md`](reproducibility/reproduce.md)
 
 **Summary:**
@@ -221,8 +206,6 @@ graph TB
 ---
 
 ## ⚡ Installation / Quick Start
-
-<!-- ✏️ FILL: Minimal commands to run a demo -->
 
 ```bash
 # Clone the repository
@@ -253,8 +236,6 @@ docker run -p 8000:8000 --env-file .env edify:latest
 
 ## 🔐 Data & Ethics
 
-<!-- ✏️ FILL: Data sources, consent, privacy, IRB -->
-
 **Data Sources:**
 - Institutional curricula (anonymized)
 - Public educational materials (CC-BY licensed)
@@ -274,8 +255,6 @@ docker run -p 8000:8000 --env-file .env edify:latest
 ---
 
 ## 📚 Publications & Citation
-
-<!-- ✏️ FILL: Links to papers, arXiv, DOI, BibTeX -->
 
 **Paper:** [Coming Soon / Link to PDF](paper/paper.pdf)  
 **arXiv:** [YYMM.NNNNN](https://arxiv.org/abs/YYMM.NNNNN) *(if available)*  
@@ -306,8 +285,6 @@ Educational content is licensed under **CC-BY 4.0**.
 
 ## 🚀 Status & Roadmap
 
-<!-- ✏️ FILL: Current state and next 3 milestones -->
-
 **Current Status:** ✅ **Production** (v1.2.0)
 
 **Roadmap:**
@@ -329,8 +306,6 @@ See detailed status: [`STATUS.md`](STATUS.md)
 ---
 
 ## 🙏 Acknowledgments & Funding
-
-<!-- ✏️ FILL: Thanks, sponsors, institutional support -->
 
 - Thanks to early adopters and beta testers
 - Azure for Startups (cloud credits)

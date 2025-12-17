@@ -243,8 +243,6 @@ graph TB
 
 ## 📈 Impact Metrics / Results
 
-<!-- ✏️ FILL: Add quantitative results from testing -->
-
 | Metric | Value | Context |
 |--------|-------|---------|
 | **Detection Accuracy** | 94.2% | Player tracking precision |
