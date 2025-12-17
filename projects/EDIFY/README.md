@@ -55,8 +55,8 @@
 |--------|-------|----------|-------------|
 | **Active Users** | 1,000+ | N/A | Production |
 | **Response Latency** | <2s | 5-7s (competitors) | **60-75% faster** |
-| **Uptime** | 99.9% | 95% (industry avg) | **4.9% higher** |
-| **Concept Retention** | 78% | 54% | **24% gain** |
+| **Uptime** | 99.9% | 95% (industry avg) | **98% reduction in downtime** |
+| **Concept Retention** | 78% | 54% | **+24 percentage points** |
 | **User Satisfaction** | 4.7/5 | 3.2/5 | **+1.5 stars** |
 | **Citation Accuracy** | 97.3% | N/A | Academic-grade |
 
