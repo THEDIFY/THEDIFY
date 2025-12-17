@@ -239,7 +239,7 @@ graph TB
 |--------|-------|---------|
 | **Detection Accuracy** | 95.7% | Fire/smoke identification (when fire present) |
 | **Prediction Lead Time** | 35 min | Advance warning before spread |
-| **False Positive Rate** | 3.2% | Alert reliability (false alarms per 100 alerts) |
+| **False Positive Rate** | 3.2% false alarms | Alert reliability (per 100 alerts) |
 | **Coverage Area** | 145 km² | Test deployment zone |
 | **Model Ensemble** | 5 AI models | Multi-modal integration |
 
