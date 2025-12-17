@@ -1,0 +1,64 @@
+cff-version: 1.2.0
+message: "If you use this software or reference these projects, please cite it as below."
+authors:
+  - family-names: "Santiago"
+    given-names: ""
+    alias: "THEDIFY"
+    email: "rasanti2008@gmail.com"
+    orcid: "https://orcid.org/0000-0000-0000-0000"  # ✏️ FILL: Add your ORCID if available
+title: "THEDIFY Portfolio: AI Innovation for Education, Sports, Environment, and EdTech"
+version: 1.0.0
+date-released: 2025-12-17
+url: "https://github.com/THEDIFY/THEDIFY"
+repository-code: "https://github.com/THEDIFY/THEDIFY"
+license: MIT
+keywords:
+  - "Artificial Intelligence"
+  - "Machine Learning"
+  - "Computer Vision"
+  - "Education Technology"
+  - "RAG"
+  - "Sports Analytics"
+  - "Disaster Prevention"
+  - "Progressive Web App"
+  - "Democratization"
+  - "Social Impact"
+abstract: >
+  This portfolio showcases four flagship AI projects addressing critical
+  challenges in education, sports, environmental protection, and accessible
+  learning. EDIFY pioneers novel Retrieval-Augmented Generation for personalized
+  education at enterprise scale. Axolotl democratizes professional sports analytics
+  through advanced computer vision. GUIRA protects vulnerable communities from
+  wildfires using multi-modal AI prediction. MenTora prepares learners globally
+  for an AI-powered future through accessible Progressive Web App technology.
+  All projects share a common mission: using AI to create equal opportunities
+  and give everyone the same starting line to achieve their dreams.
+references:
+  - type: software
+    title: "EDIFY - Enterprise AI Education Platform"
+    authors:
+      - family-names: "Santiago"
+        alias: "THEDIFY"
+    url: "https://github.com/THEDIFY/THEDIFY/tree/main/projects/EDIFY"
+    abstract: "Novel RAG technique for personalized learning at scale"
+  - type: software
+    title: "Axolotl - AI Football Analysis Platform"
+    authors:
+      - family-names: "Santiago"
+        alias: "THEDIFY"
+    url: "https://github.com/THEDIFY/THEDIFY/tree/main/projects/Axolotl"
+    abstract: "Computer vision for democratized sports analytics"
+  - type: software
+    title: "GUIRA - Fire Prevention & Disaster AI"
+    authors:
+      - family-names: "Santiago"
+        alias: "THEDIFY"
+    url: "https://github.com/THEDIFY/THEDIFY/tree/main/projects/GUIRA"
+    abstract: "Multi-modal AI for wildfire prediction and community protection"
+  - type: software
+    title: "MenTora - EdTech for AI-Ready World"
+    authors:
+      - family-names: "Santiago"
+        alias: "THEDIFY"
+    url: "https://github.com/THEDIFY/THEDIFY/tree/main/projects/MenTora"
+    abstract: "Progressive Web App for accessible AI education"

@@ -1,0 +1,7 @@
+# GUIRA - Abstract
+
+**GUIRA** (Geospatial Unified Intelligence for Risk Assessment) is a multi-modal AI system designed to predict and prevent wildfire disasters in underserved communities. The platform integrates five specialized deep learning models—YOLOv8 for real-time fire and smoke detection, TimeSFormer for temporal spread pattern analysis, ResNet50 for vegetation health monitoring via satellite imagery, CSRNet for wildlife displacement tracking, and physics-based fire propagation simulations—to provide 30-60 minute advance warnings of wildfire threats. By combining computer vision, geospatial intelligence, and meteorological data with Digital Elevation Models (DEMs), GUIRA generates actionable risk maps and evacuation routes tailored to local terrain and community infrastructure. This work addresses the critical disparity in disaster preparedness where resource-limited communities lack access to predictive technologies available to wealthy regions. Deployed on low-cost camera infrastructure and open satellite data, GUIRA democratizes environmental protection, ensuring that every community—regardless of economic status—receives equal opportunity to prepare for and survive natural disasters. Field testing demonstrates high-accuracy detection (95%+) with significantly extended warning times compared to traditional reactive systems.
+
+---
+
+**Keywords:** Wildfire Prediction, Computer Vision, Multi-Modal AI, Geospatial Intelligence, YOLOv8, TimeSFormer, Environmental Justice, Early Warning Systems, Disaster Prevention

@@ -1,0 +1,7 @@
+# MenTora - Abstract
+
+**MenTora** is a Progressive Web Application (PWA) designed to democratize AI education and prepare learners worldwide for an AI-transformed future. Built with React 18, TypeScript, and FastAPI, MenTora delivers interactive, hands-on AI/ML courses through a mobile-first, offline-capable platform accessible on any device without app store barriers. The platform integrates in-browser Python environments (Pyodide), live AI model demonstrations (TensorFlow.js), and gamified progress tracking to create engaging learning experiences that adapt to individual skill levels. With Stripe-powered global payment infrastructure, tiered pricing models, and scholarship programs, MenTora ensures economic accessibility while maintaining production-grade security through JWT authentication and encrypted data handling. This work addresses the critical AI skills gap where millions—particularly in underserved communities—lack access to quality, affordable AI education despite artificial intelligence reshaping every industry. By combining modern web technologies with pedagogical best practices, MenTora lowers barriers to entry and provides clear pathways from AI-curious beginner to AI-proficient professional, ensuring that opportunity in the AI era is determined by motivation and talent rather than financial resources or geographic location.
+
+---
+
+**Keywords:** EdTech, AI Education, Progressive Web App, React, Accessible Learning, democratization, Interactive Learning, FastAPI, Stripe Integration
