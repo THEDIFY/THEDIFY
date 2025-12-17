@@ -54,22 +54,22 @@ mkdir -p "$PROJECT_DIR/paper"
 # Copy templates
 echo -e "${GREEN}✓${NC} Copying documentation templates..."
 
-if [ ! -f "$PROJECT_DIR/README.md" ] || [ "$REPLY" = "y" ] || [ "$REPLY" = "Y" ]; then
+if [ ! -f "$PROJECT_DIR/README.md" ] || [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cp "$REPO_ROOT/templates/README-template.md" "$PROJECT_DIR/README.md"
     echo -e "${GREEN}  ✓${NC} README.md"
 fi
 
-if [ ! -f "$PROJECT_DIR/ABSTRACT.md" ] || [ "$REPLY" = "y" ] || [ "$REPLY" = "Y" ]; then
+if [ ! -f "$PROJECT_DIR/ABSTRACT.md" ] || [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cp "$REPO_ROOT/templates/ABSTRACT-template.md" "$PROJECT_DIR/ABSTRACT.md"
     echo -e "${GREEN}  ✓${NC} ABSTRACT.md"
 fi
 
-if [ ! -f "$PROJECT_DIR/STATUS.md" ] || [ "$REPLY" = "y" ] || [ "$REPLY" = "Y" ]; then
+if [ ! -f "$PROJECT_DIR/STATUS.md" ] || [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cp "$REPO_ROOT/templates/STATUS-template.md" "$PROJECT_DIR/STATUS.md"
     echo -e "${GREEN}  ✓${NC} STATUS.md"
 fi
 
-if [ ! -f "$PROJECT_DIR/reproducibility/reproduce.md" ] || [ "$REPLY" = "y" ] || [ "$REPLY" = "Y" ]; then
+if [ ! -f "$PROJECT_DIR/reproducibility/reproduce.md" ] || [[ "$REPLY" =~ ^[Yy]$ ]]; then
     cp "$REPO_ROOT/templates/REPRODUCIBILITY-template.md" "$PROJECT_DIR/reproducibility/reproduce.md"
     echo -e "${GREEN}  ✓${NC} reproducibility/reproduce.md"
 fi

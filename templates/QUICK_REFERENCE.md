@@ -160,8 +160,7 @@ Work through each template, replacing placeholders marked with `<!-- ✏️ FILL
 
 ### Creating Architecture Diagram with Mermaid
 
-```markdown
-\`\`\`mermaid
+```mermaid
 graph TD
     A[User Interface] --> B[API Gateway]
     B --> C[Application Layer]
@@ -171,7 +170,6 @@ graph TD
     style A fill:#4A90E2
     style D fill:#E27B4A
     style E fill:#7BC96F
-\`\`\`
 ```
 
 ### Adding Performance Comparison Table
