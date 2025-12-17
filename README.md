@@ -479,17 +479,16 @@ graph TB
 
 | Metric | Achievement |
 |--------|-------------|
-| 👥 **Active Users** | **1,000+** in production |
+| 👥 **Active Users** | **100+** in production |
 | ⚡ **Response Time** | **<2 seconds** (60-75% faster than competitors) |
 | 📈 **Uptime** | **99.9%** availability |
 | 🎓 **Institutions** | Serving educational organizations |
 
 ---
 
-#### 📸 **PROOF: Live Platform**
+#### 📸 **Platform Details**
 
-<!-- 🖼️ Add screenshot: projects/EDIFY/assets/screenshots/ -->
-**[PLACEHOLDER: Screenshot of EDIFY dashboard showing personalized learning interface]**
+![EDIFY Platform Dashboard](./projects/EDIFY/assets/screenshots/screenshot-1766005977088.png)
 
 <a href="./projects/EDIFY/assets/screenshots/">
   <img src="https://img.shields.io/badge/📂_View_All-Screenshots-00F5FF?style=for-the-badge" />
@@ -565,10 +564,9 @@ graph TB
 
 ---
 
-#### 📸 **PROOF: Live Analysis**
+#### 📸 **Platform Details**
 
-<!-- 🖼️ Add screenshot: projects/Axolotl/assets/screenshots/ -->
-**[PLACEHOLDER: Screenshot showing player tracking, heatmaps, and performance metrics]**
+![Axolotl Analysis Dashboard](./projects/Axolotl/assets/screenshots/dashboard.png)
 
 <a href="./projects/Axolotl/assets/screenshots/">
   <img src="https://img.shields.io/badge/📂_View_All-Screenshots-8B5CF6?style=for-the-badge" />
@@ -645,10 +643,9 @@ graph TB
 
 ---
 
-#### 📸 **PROOF: Detection System**
+#### 📸 **Platform Details**
 
-<!-- 🖼️ Add screenshot: projects/GUIRA/assets/screenshots/ -->
-**[PLACEHOLDER: Screenshot showing fire detection, risk heatmap, and prediction model]**
+> 🚧 **Visual assets in development** — Detection system screenshots will be added upon deployment completion.
 
 <a href="./projects/GUIRA/assets/screenshots/">
   <img src="https://img.shields.io/badge/📂_View_All-Screenshots-A855F7?style=for-the-badge" />
@@ -725,10 +722,9 @@ graph TB
 
 ---
 
-#### 📸 **PROOF: Learning Interface**
+#### 📸 **Platform Details**
 
-<!-- 🖼️ Add screenshot: projects/MenTora/assets/screenshots/ -->
-**[PLACEHOLDER: Screenshot showing course dashboard, interactive lessons, and progress tracking]**
+![MenTora Learning Platform](./projects/MenTora/assets/screenshots/image.png)
 
 <a href="./projects/MenTora/assets/screenshots/">
   <img src="https://img.shields.io/badge/📂_View_All-Screenshots-C084FC?style=for-the-badge" />
@@ -1139,7 +1135,7 @@ the journey of innovation always starts with a single line on paper.*
   <a href="mailto:rasanti2008@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-00F5FF?style=for-the-badge&logo=gmail&logoColor=white" />
   </a>
-  <a href="https://linkedin.com/in/santiago-ramirez-0a5073292/">
+  <a href="https://www.linkedin.com/in/santiago-ramirez-0a5073292/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-8B5CF6?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
 </p>
@@ -1212,18 +1208,6 @@ console.log("Mission: Empowering dreams through technology ✨");
 > *"The best way to predict the future is to build it.  
 > But the best way to build it is to ensure everyone  
 > has the same starting line to achieve their dreams."*
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-### ⚡ **In My Own Words**
-
-*"I sketch with pencil and paper first, then architect the future in code"* ✏️🚀
-
-*"From José José to AI algorithms—passion and precision drive innovation"* 🎵🤖
-
-*"The Egoista inspires my work: bold, efficient, zero compromise"* 🏎️💻
-
-*"Every project serves a mission: giving everyone equal opportunity"* 🌍✨
 
 <img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
 
