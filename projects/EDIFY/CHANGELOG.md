@@ -96,7 +96,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Fully functional AI-powered education platform
   - Sub-2-second response latency
   - 99.9% uptime SLA
-  - Support for 1,000+ concurrent users
+  - Support for 100+ concurrent users
 
 - **Core Features:**
   - Novel RAG algorithm with hybrid search
@@ -335,7 +335,7 @@ profile = {
 
 | Version | Response Time (p95) | Uptime | Concurrent Users |
 |---------|---------------------|--------|------------------|
-| 1.2.0 | 1.8s | 99.9% | 1,000+ |
+| 1.2.0 | 1.8s | 99.9% | 100+ |
 | 1.1.0 | 1.9s | 99.8% | 500+ |
 | 1.0.0 | 2.0s | 99.9% | 100+ |
 | 0.9.0 (Beta) | 2.5s | 98.5% | 50+ |

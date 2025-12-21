@@ -33,6 +33,32 @@
 
 ---
 
+## 🎥 Platform Demonstrations
+
+<div align="center">
+
+### 🚀 Full Platform Walkthrough
+
+<video src="https://github.com/THEDIFY/THEDIFY/raw/main/projects/MenTora/assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202025-11-07%2020-55-01.mp4" controls width="100%" style="max-width: 800px;">
+  Your browser does not support the video tag.
+</video>
+
+*Complete tour of MenTora's features: course discovery, learning paths, interactive exercises, and personalized dashboard*
+
+---
+
+### 📱 Mobile & PWA Experience
+
+<video src="https://github.com/THEDIFY/THEDIFY/raw/main/projects/MenTora/assets/videos/MenTora%20-%20AI%20Learning%20Platform%20powered%20by%20EDIFY%20-%20Personal%20-%20Microsoft%E2%80%8B%20Edge%202025-11-07%2020-58-59.mp4" controls width="100%" style="max-width: 800px;">
+  Your browser does not support the video tag.
+</video>
+
+*See MenTora's responsive design, mobile navigation, and Progressive Web App capabilities in action*
+
+</div>
+
+---
+
 ## 📋 Overview
 
 **MenTora** is a Progressive Web Application (PWA) designed to democratize AI education and prepare learners worldwide for an AI-transformed future. Built with React 19, TypeScript, and FastAPI, MenTora delivers interactive, hands-on AI/ML courses through a mobile-first, offline-capable platform accessible on any device without app store barriers.

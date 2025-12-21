@@ -14,7 +14,7 @@
 ## 📋 TL;DR / Abstract
 
 <!-- ✏️ FILL: 1-2 sentences summarizing the novel RAG technique and impact -->
-**EDIFY** is an enterprise-scale AI education platform that pioneers a novel Retrieval-Augmented Generation (RAG) approach for personalized learning. The system adapts to individual student goals and institutional curricula, delivering sub-2-second response times while serving 1,000+ concurrent users with 99.9% uptime.
+**EDIFY** is an enterprise-scale AI education platform that pioneers a novel Retrieval-Augmented Generation (RAG) approach for personalized learning. The system adapts to individual student goals and institutional curricula, delivering sub-2-second response times while serving 100+ concurrent users with 99.9% uptime.
 
 ---
 
@@ -62,7 +62,7 @@
 
 | Metric | Value | Baseline | Improvement |
 |--------|-------|----------|-------------|
-| **Active Users** | 1,000+ | N/A | Production |
+| **Active Users** | 100+ | N/A | Production |
 | **Response Latency** | <2s | 5-7s (competitors) | **60-75% faster** |
 | **Uptime** | 99.9% | 95% (industry avg) | **4.9% higher** |
 | **Concept Retention** | [FILL]% | [FILL]% | **[FILL]% gain** |
