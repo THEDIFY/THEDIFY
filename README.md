@@ -1,72 +1,25 @@
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- HYPER-FUTURISTIC ANIMATED WAVE HEADER -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6,8,12,20,24,30&height=300&section=header&text=THEDIFY&fontSize=90&fontAlignY=35&animation=twinkling&fontColor=00F5FF&desc=Founder%20and%20CEO%20of%20EDIFY%20|%20AI%20Innovator%20|%20Dream%20Enabler&descAlignY=55&descSize=20&descColor=FFFFFF"/>
+# THEDIFY
 
-<!-- DYNAMIC HOLOGRAPHIC TYPING EFFECT -->
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=32&duration=3000&pause=1000&color=00F5FF&center=true&vCenter=true&multiline=true&repeat=true&width=900&height=120&lines=%F0%9F%9A%80+Founder+%26+CEO+of+EDIFY;%F0%9F%A7%A0+AI+Engineer+%7C+RAG+Pioneer;%F0%9F%8E%AF+Fine-tuning+%7C+Agents+%7C+Computer+Vision;%E2%9C%A8+Empowering+Dreams+Through+Innovation" alt="Typing SVG" />
-</p>
+**Founder & CEO of EDIFY | AI Innovation Architect | High School Student**
 
-<!-- FLOWING GRADIENT DIVIDER -->
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+---
 
-<!-- MISSION STATEMENT -->
-<table>
-<tr>
-<td align="center" width="900">
+*"My mission is to empower others to achieve their dreams, giving everyone the same starting line."*
 
-### 🌟 **SANTIAGO** 🌟
+---
 
-**Founder & CEO of EDIFY** | **AI Innovation Architect** | **High School Student**
-
-> *"My mission is to empower others to achieve their dreams,*  
-> *giving everyone the same starting line."*
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="800">
-
-🎓 **High School Student**  
-🚀 **Building Enterprise AI Solutions**  
-💡 **Pioneer of Novel RAG Techniques**
-
-</td>
-</tr>
-</table>
-
-<!-- HOLOGRAPHIC BADGES -->
-<p align="center">
-  <img src="https://img.shields.io/badge/🔥_Founder_&_CEO-EDIFY-00F5FF?style=for-the-badge&labelColor=0a192f&color=00F5FF" />
-  <img src="https://img.shields.io/badge/🧠_AI_Engineer-Expert-8B5CF6?style=for-the-badge&labelColor=0a192f&color=8B5CF6" />
-  <img src="https://img.shields.io/badge/🔬_RAG_Pioneer-Innovator-667eea?style=for-the-badge&labelColor=0a192f&color=667eea" />
-  <img src="https://img.shields.io/badge/👁️_Computer_Vision-Advanced-A855F7?style=for-the-badge&labelColor=0a192f&color=A855F7" />
-</p>
-
-<!-- CI/CD & PROJECT STATUS BADGES -->
-<p align="center">
-  <a href=".github/workflows/ci.yml">
-    <img src="https://img.shields.io/badge/CI%2FCD-Automated-00C853?style=for-the-badge&logo=github-actions&logoColor=white" />
-  </a>
-  <img src="https://img.shields.io/badge/Projects-4_Active-FFD700?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=for-the-badge" />
-  <a href="CITATION.cff">
-    <img src="https://img.shields.io/badge/Citation-Available-667eea?style=for-the-badge&logo=academicCapacitor&logoColor=white" />
-  </a>
-</p>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="900">
+[![CI/CD](https://img.shields.io/badge/CI%2FCD-Automated-4a5568?style=flat-square&logo=github-actions&logoColor=white)](/.github/workflows/ci.yml)
+[![Projects](https://img.shields.io/badge/Projects-5_Active-4a5568?style=flat-square)](#flagship-projects)
+[![License](https://img.shields.io/badge/License-MIT-3b82f6?style=flat-square)](/LICENSE)
+[![Citation](https://img.shields.io/badge/Citation-Available-3b82f6?style=flat-square)](/CITATION.cff)
 
 </div>
 
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- ABOUT ME SECTION -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
+---
 
-## <img src="https://user-images.githubusercontent.com/74038190/212284087-bbe7e430-757e-4901-90bf-4cd2ce3e1852.gif" width="30"> **About Me**
-
-<div align="center">
+## About
 
 ```python
 class THEDIFY:
@@ -74,571 +27,357 @@ class THEDIFY:
         self.name = "Santiago"
         self.role = "Founder & CEO of EDIFY"
         self.title = "AI Engineer & Innovation Architect"
-        self.location = "🇲🇽 Mexico"
-        self.education = "(High School) and autodidact"
+        self.location = "Mexico"
+        self.education = "High School (Autodidact)"
         self.mission = "Empowering others to achieve their dreams"
         
-    def get_expertise(self):
+    def expertise(self):
         return {
-            "🧠 AI/ML": {
-                "Specialties": ["Fine-tuning", "AI Agents", "LLMs"],
-                "Innovation": ["Novel RAG Technique (EDIFY)", "Hybrid Search"],
-                "Frameworks": ["PyTorch", "TensorFlow", "Hugging Face"]
-            },
-            "👁️ Computer Vision": {
-                "Skills": ["Object Detection", "Image Segmentation", "Video Analysis"],
-                "Projects": ["Axolotl Sports Analytics", "Fire Detection Systems"]
-            },
-            "💻 Languages": ["Python", "JavaScript", "C++", "TypeScript"],
-            "☁️ Cloud": ["Azure OpenAI", "Azure AI Search", "Azure Cosmos DB"],
-            "🏗️ Backend": ["REST APIs", "Microservices", "FastAPI", "Flask"],
-            "🎨 Design": ["UI/UX Concepts", "System Architecture", "Pencil Sketching"]
+            "AI/ML": ["Fine-tuning", "AI Agents", "LLMs", "Novel RAG Techniques"],
+            "Computer Vision": ["Object Detection", "Video Analysis", "Pose Estimation"],
+            "Languages": ["Python", "JavaScript", "TypeScript", "C++"],
+            "Cloud": ["Azure OpenAI", "Azure AI Search", "Azure Cosmos DB"],
+            "Backend": ["REST APIs", "Microservices", "FastAPI", "Flask"]
         }
-    
-    def get_current_focus(self):
-        return [
-            "🎓 Scaling EDIFY for educational institutions",
-            "⚽ Advanced CV for Axolotl sports analytics",
-            "🔥 Multi-model AI for environmental monitoring",
-            "🧠 Research: Novel RAG approaches"
-        ]
-    
-    def philosophy(self):
-        return "Giving everyone the same starting line 🚀"
 ```
 
-</div>
+---
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- KNOWLEDGE GRAPH VISUALIZATION - TALLER & MORE VISIBLE -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="30"> **Knowledge Architecture**
-
-<div align="center">
+## Knowledge Architecture
 
 ```mermaid
 graph TB
-    ROOT[<b>SANTIAGO</b><br/>Founder & CEO - EDIFY<br/>AI Innovation Architect]
+    ROOT[SANTIAGO<br/>Founder & CEO - EDIFY]
     
-    ROOT --> PROJECTS[🚀 Projects]
-    ROOT --> TECH[⚙️ Tech Stack]
-    ROOT --> MISSION[🌍 Mission]
+    ROOT --> PROJECTS[Projects]
+    ROOT --> TECH[Tech Stack]
+    ROOT --> MISSION[Mission]
     
     PROJECTS --> EDIFY[EDIFY<br/>AI Education]
     PROJECTS --> AXOLOTL[Axolotl<br/>Sports Analytics]
     PROJECTS --> GUIRA[GUIRA<br/>Fire Prevention]
     PROJECTS --> MENTORA[MenTora<br/>EdTech PWA]
+    PROJECTS --> TALENTO[TalenTo<br/>Talent Platform]
+    PROJECTS --> TROPHY[TrofyTruck<br/>Chassis Optimization]
     
-    TECH --> AI[AI/ML<br/>RAG • CV • LLMs]
-    TECH --> CLOUD[Cloud<br/>Azure • Docker]
-    TECH --> CODE[Development<br/>Python • React • TS]
+    TECH --> AI[AI/ML<br/>RAG, CV, LLMs]
+    TECH --> CLOUD[Cloud<br/>Azure, Docker]
+    TECH --> CODE[Development<br/>Python, React, TS]
     
-    MISSION --> EQUAL[Equal Access<br/>Same Starting Line]
-    MISSION --> IMPACT[Social Impact<br/>Education • Safety]
-    MISSION --> OPEN[Open Knowledge<br/>Collaboration]
+    MISSION --> EQUAL[Equal Access]
+    MISSION --> IMPACT[Social Impact]
+    MISSION --> OPEN[Open Knowledge]
     
-    style ROOT fill:#00F5FF,stroke:#0099CC,stroke-width:4px,color:#000,font-weight:bold
-    style PROJECTS fill:#667eea,stroke:#5568D3,stroke-width:3px,color:#fff,font-weight:bold
-    style TECH fill:#8B5CF6,stroke:#7C3AED,stroke-width:3px,color:#fff,font-weight:bold
-    style MISSION fill:#A855F7,stroke:#9333EA,stroke-width:3px,color:#fff,font-weight:bold
-    
-    style EDIFY fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
-    style AXOLOTL fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
-    style GUIRA fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
-    style MENTORA fill:#4338CA,stroke:#667eea,stroke-width:2px,color:#fff
-    
-    style AI fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
-    style CLOUD fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
-    style CODE fill:#6D28D9,stroke:#8B5CF6,stroke-width:2px,color:#fff
-    
-    style EQUAL fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
-    style IMPACT fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
-    style OPEN fill:#7E22CE,stroke:#A855F7,stroke-width:2px,color:#fff
+    style ROOT fill:#374151,stroke:#6b7280,stroke-width:2px,color:#fff
+    style PROJECTS fill:#4b5563,stroke:#6b7280,stroke-width:2px,color:#fff
+    style TECH fill:#4b5563,stroke:#6b7280,stroke-width:2px,color:#fff
+    style MISSION fill:#4b5563,stroke:#6b7280,stroke-width:2px,color:#fff
+    style EDIFY fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style AXOLOTL fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style GUIRA fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style MENTORA fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style TALENTO fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style TROPHY fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
 ```
 
-</div>
+---
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+## Flagship Projects
 
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- FLAGSHIP PROJECTS - MISSION-DRIVEN FLOW -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
+Each project includes dedicated documentation, technical deep-dives, reproducibility guides, and research abstracts.
 
-## <img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="30" /> **Flagship Projects**
+| Project | Description | Status | Documentation |
+|---------|-------------|--------|---------------|
+| **[EDIFY](./projects/EDIFY/README.md)** | Enterprise AI Education Platform | Production | [Details](./projects/EDIFY/README.md) &#124; [Abstract](./projects/EDIFY/ABSTRACT.md) |
+| **[Axolotl](./projects/Axolotl/README.md)** | AI Sports Analytics Platform | Beta | [Details](./projects/Axolotl/README.md) &#124; [Abstract](./projects/Axolotl/ABSTRACT.md) |
+| **[GUIRA](./projects/GUIRA/README.md)** | Wildfire Prevention & Disaster AI | Research | [Details](./projects/GUIRA/README.md) &#124; [Abstract](./projects/GUIRA/ABSTRACT.md) |
+| **[MenTora](./projects/MenTora/README.md)** | AI Education PWA | Production | [Details](./projects/MenTora/README.md) &#124; [Abstract](./projects/MenTora/ABSTRACT.md) |
+| **[TalenTo](./projects/TalenTo/README.md)** | Technical Trades Platform | Development | [Details](./projects/TalenTo/README.md) |
+| **[TrofyTruck](./projects/TrofyTruck/README.md)** | Trophy Truck Chassis Optimizer | Development | [Details](./projects/TrofyTruck/README.md) |
 
-> **Explore the full portfolio**: Each project has dedicated documentation with technical deep-dives, reproducibility guides, and research abstracts.
+---
+
+## Project Showcase
+
+### EDIFY — Enterprise AI Education Platform
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- PROJECT CARDS WITH LINKS -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
-<table>
-<tr>
-<td align="center" width="50%">
-
-### 🎓 **[EDIFY](./projects/EDIFY/README.md)**
-
-<a href="./projects/EDIFY/README.md">
-  <img src="https://img.shields.io/badge/📂_View_Project-Documentation-00F5FF?style=for-the-badge&labelColor=0a192f" />
-</a>
-
-**Enterprise AI Education Platform**
-
-🧠 Novel RAG Technique  
-⚡ 100+ Users | Sub-2s Latency  
-🎯 Personalized Learning
-
-<a href="./projects/EDIFY/README.md">Full Details</a> | <a href="./projects/EDIFY/ABSTRACT.md">Abstract</a> | <a href="./projects/EDIFY/STATUS.md">Status</a>
-
-</td>
-<td align="center" width="50%">
-
-### ⚽ **[Axolotl](./projects/Axolotl/README.md)**
-
-<a href="./projects/Axolotl/README.md">
-  <img src="https://img.shields.io/badge/📂_View_Project-Documentation-8B5CF6?style=for-the-badge&labelColor=0a192f" />
-</a>
-
-**Sports Analytics & Computer Vision**
-
-👁️ YOLOv8 + DeepSORT + MediaPipe  
-🎥 Real-time Performance Tracking  
-🏗️ Microservices Architecture
-
-<a href="./projects/Axolotl/README.md">Full Details</a> | <a href="./projects/Axolotl/ABSTRACT.md">Abstract</a> | <a href="./projects/Axolotl/STATUS.md">Status</a>
-
-</td>
-</tr>
-<tr>
-<td align="center" width="50%">
-
-### 🔥 **[GUIRA](./projects/GUIRA/README.md)**
-
-<a href="./projects/GUIRA/README.md">
-  <img src="https://img.shields.io/badge/📂_View_Project-Documentation-A855F7?style=for-the-badge&labelColor=0a192f" />
-</a>
-
-**Fire Prevention & Disaster AI**
-
-🛰️ Multi-Modal AI (5 Models)  
-🌍 Geospatial Intelligence  
-⏰ 35-Min Early Warning
-
-<a href="./projects/GUIRA/README.md">Full Details</a> | <a href="./projects/GUIRA/ABSTRACT.md">Abstract</a> | <a href="./projects/GUIRA/STATUS.md">Status</a>
-
-</td>
-<td align="center" width="50%">
-
-### 📱 **[MenTora](./projects/MenTora/README.md)**
-
-<a href="./projects/MenTora/README.md">
-  <img src="https://img.shields.io/badge/📂_View_Project-Documentation-C084FC?style=for-the-badge&labelColor=0a192f" />
-</a>
-
-**EdTech Progressive Web App**
-
-💻 React 18 PWA  
-🎓 AI/ML Curriculum  
-🌐 Offline-Capable Learning
-
-<a href="./projects/MenTora/README.md">Full Details</a> | <a href="./projects/MenTora/ABSTRACT.md">Abstract</a> | <a href="./projects/MenTora/STATUS.md">Status</a>
-
-</td>
-</tr>
-</table>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+[![Status](https://img.shields.io/badge/Status-Production-3b82f6?style=flat-square)](#)
+[![Users](https://img.shields.io/badge/Users-100+-4a5568?style=flat-square)](#)
+[![Latency](https://img.shields.io/badge/Latency-<2s-4a5568?style=flat-square)](#)
 
 </div>
 
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- DETAILED PROJECT SHOWCASE -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+#### WHY
 
-## <img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="30"> **Detailed Showcase**
+Traditional education platforms fail to personalize learning. Generic content doesn't match individual skill levels, leading to poor retention and limited access to quality education for underserved communities.
+
+**Mission:** Democratize AI-powered learning—give everyone access to world-class, personalized education that adapts to their unique goals and pace.
+
+#### HOW
+
+Custom Retrieval-Augmented Generation (RAG) technique combining:
+
+- **Hybrid Vector Search** — Semantic understanding with keyword precision
+- **Adaptive Learning Engine** — Real-time curriculum adjustment
+- **Multi-turn Context** — Maintains conversation state for coherent dialogue
+- **Smart Citations** — Transparent source attribution
+- **Enterprise Scale** — Production-ready for 10,000+ concurrent learners
+
+#### WHAT
+
+| Metric | Result |
+|--------|--------|
+| Active Users | 100+ in production |
+| Response Time | Less than 2 seconds (60-75% faster than competitors) |
+| Uptime | 99.9% availability |
+
+**Tech Stack:** Azure OpenAI, React 18, Python 3.11, TypeScript, Cosmos DB, AI Search
+
+![EDIFY Platform](./projects/EDIFY/assets/screenshots/screenshot-1766005977088.png)
+
+[View Full Documentation](./projects/EDIFY/README.md)
+
+---
+
+### Axolotl — AI Sports Analytics Platform
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+[![Status](https://img.shields.io/badge/Status-Beta-4a5568?style=flat-square)](#)
+[![Accuracy](https://img.shields.io/badge/Detection-92%25-3b82f6?style=flat-square)](#)
+[![FPS](https://img.shields.io/badge/Processing-45_FPS-4a5568?style=flat-square)](#)
 
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- EDIFY - BLUE GRADIENT -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+</div>
 
-<table>
-<tr>
-<td align="center" width="100%">
+#### WHY
 
-### 🎓 **[EDIFY](https://github.com/THEDIFY/EDIFY)** - Enterprise AI Education Platform
+Professional-level sports analytics costs thousands—only elite teams can afford it. Grassroots athletes are left behind, unable to access data-driven insights that could transform their performance.
 
-<img src="https://img.shields.io/badge/⭐_FLAGSHIP-Founder's_Project-FFD700?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🚀_Production-100+_Users-00F5FF?style=for-the-badge&labelColor=0a192f&color=00F5FF" />
-<img src="https://img.shields.io/badge/⚡_Latency-Sub_2s-00C853?style=for-the-badge&labelColor=0a192f" />
+**Mission:** Level the playing field. Give every athlete access to cutting-edge AI analytics that elite teams use.
 
----
+#### HOW
 
-#### 🎯 **WHY: The Problem**
+GPU-accelerated multi-model computer vision pipeline:
 
-> **Traditional education platforms fail to personalize learning.**  
-> Generic content doesn't match individual skill levels, leading to poor retention and limited access to quality education for underserved communities.
+- **YOLOv8 Detection** — Real-time player/ball tracking
+- **ByteTrack Tracking** — Multi-object trajectory analysis
+- **MediaPipe Pose** — Biomechanical movement assessment
+- **SMPL Body Mesh** — 3D reconstruction for detailed analysis
+- **GPT-4 + RAG** — AI-powered coaching recommendations
 
-**The Mission:** Democratize AI-powered learning. Give *everyone*—regardless of background—access to world-class, personalized education that adapts to their unique goals and pace.
+#### WHAT
 
----
+| Metric | Result |
+|--------|--------|
+| Detection Accuracy | 92% on live footage |
+| Processing Speed | Real-time (45 FPS) |
+| Metrics Tracked | 50+ technical and physical indicators |
 
-#### 🔬 **HOW: Novel RAG Innovation**
+**Tech Stack:** YOLOv8, PyTorch, ByteTrack, MediaPipe, Docker, Redis
 
-**Breakthrough Algorithm:** Custom Retrieval-Augmented Generation (RAG) technique
+![Axolotl Dashboard](./projects/Axolotl/assets/screenshots/dashboard.png)
 
-🧠 **Hybrid Vector Search** → Semantic understanding + keyword precision  
-🎯 **Adaptive Learning Engine** → Real-time curriculum adjustment  
-💬 **Multi-turn Context** → Maintains conversation state for coherent dialogue  
-📊 **Smart Citations** → Transparent source attribution builds trust  
-⚡ **Enterprise Scale** → Production-ready for 10,000+ concurrent learners  
-🔄 **Personalized Paths** → Your data trains YOUR AI tutor
+[View Full Documentation](./projects/Axolotl/README.md)
 
 ---
 
-#### 💎 **WHAT: Proven Results**
+### GUIRA — Wildfire Prevention & Disaster AI
 
-**Real-World Impact:**
+<div align="center">
 
-| Metric | Achievement |
-|--------|-------------|
-| 👥 **Active Users** | **100+** in production |
-| ⚡ **Response Time** | **<2 seconds** (60-75% faster than competitors) |
-| 📈 **Uptime** | **99.9%** availability |
-| 🎓 **Institutions** | Serving educational organizations |
+[![Status](https://img.shields.io/badge/Status-Research-4a5568?style=flat-square)](#)
+[![Models](https://img.shields.io/badge/AI_Models-5-3b82f6?style=flat-square)](#)
+[![Warning](https://img.shields.io/badge/Early_Warning-35_min-4a5568?style=flat-square)](#)
 
----
+</div>
 
-#### 📸 **Platform Details**
+#### WHY
 
-![EDIFY Platform Dashboard](./projects/EDIFY/assets/screenshots/screenshot-1766005977088.png)
+Wildfires devastate small communities that lack resources for advanced warning systems. By the time smoke is visible, it's often too late. Vulnerable populations need early detection to evacuate safely.
 
-<a href="./projects/EDIFY/assets/screenshots/">
-  <img src="https://img.shields.io/badge/📂_View_All-Screenshots-00F5FF?style=for-the-badge" />
-</a>
-<a href="./projects/EDIFY/README.md">
-  <img src="https://img.shields.io/badge/📖_Full_Documentation-Technical_Details-667eea?style=for-the-badge" />
-</a>
+**Mission:** Use AI for environmental justice. Provide small communities with the same advanced fire prediction technology that wealthy areas have.
 
-**Tech Stack:**
-<p align="center">
-<img src="https://img.shields.io/badge/Azure_OpenAI-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white" />
-<img src="https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/Python_3.11-3776AB?style=flat-square&logo=python&logoColor=white" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/Cosmos_DB-0078D4?style=flat-square&logo=microsoft-azure&logoColor=white" />
-<img src="https://img.shields.io/badge/AI_Search-00F5FF?style=flat-square&logo=microsoft-azure&logoColor=white" />
-</p>
+#### HOW
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+5-model ensemble combining geospatial intelligence, computer vision, and physics simulation:
 
-</td>
-</tr>
-</table>
+- **YOLOv8 Fire Detection** — Real-time wildfire identification
+- **TimeSFormer Video** — Temporal smoke pattern analysis
+- **ResNet50 + VARI** — Vegetation health monitoring
+- **CSRNet** — Wildlife displacement tracking
+- **Physics Simulation** — Fire spread prediction with cellular automata
 
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- AXOLOTL - CYAN GRADIENT -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
+#### WHAT
 
-<table>
-<tr>
-<td align="center" width="100%">
+| Metric | Result |
+|--------|--------|
+| Detection Accuracy | 95% fire/smoke identification |
+| Early Warning | 35 minutes average lead time |
+| Spatial Resolution | 100m precision geospatial mapping |
 
-### ⚽ **[Axolotl](https://github.com/THEDIFY/axolotl)** - AI Sports Analytics Platform
+**Tech Stack:** YOLOv8, PyTorch, TimeSFormer, GDAL, PostGIS, ResNet50
 
-<img src="https://img.shields.io/badge/⭐_Personal_Project-Passion_Driven-FFD700?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/👁️_Computer_Vision-YOLOv8+DeepSORT-8B5CF6?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🎯_Accuracy-92%25_Detection-00C853?style=for-the-badge&labelColor=0a192f" />
+```mermaid
+graph LR
+    A[Data Sources] --> B[Processing Pipeline]
+    B --> C[AI Models]
+    C --> D[Risk Assessment]
+    D --> E[Alerts]
+    
+    subgraph Sources
+        A1[Drone Cameras]
+        A2[Satellite - Sentinel-2]
+        A3[Weather APIs]
+    end
+    
+    subgraph Models
+        C1[Fire Detection]
+        C2[Smoke Analysis]
+        C3[Vegetation Health]
+        C4[Wildlife Tracking]
+    end
+    
+    A1 --> A
+    A2 --> A
+    A3 --> A
+    C --> C1
+    C --> C2
+    C --> C3
+    C --> C4
+    
+    style A fill:#374151,stroke:#6b7280,color:#fff
+    style B fill:#374151,stroke:#6b7280,color:#fff
+    style C fill:#3b82f6,stroke:#2563eb,color:#fff
+    style D fill:#374151,stroke:#6b7280,color:#fff
+    style E fill:#3b82f6,stroke:#2563eb,color:#fff
+```
 
----
-
-#### 🎯 **WHY: Democratizing Sports Analytics**
-
-> **Professional-level sports analytics costs thousands—only elite teams can afford it.**  
-> Grassroots athletes are left behind, unable to access the same data-driven insights that could transform their performance.
-
-**The Mission:** Level the playing field. Give *every athlete*—from amateur to semi-pro—access to cutting-edge AI analytics that elite teams use. No one should be held back by lack of resources.
-
----
-
-#### 🔬 **HOW: Multi-Model Computer Vision Pipeline**
-
-**Technical Architecture:** GPU-accelerated microservices
-
-👁️ **YOLOv8 Detection** → Real-time player/ball tracking  
-🏃 **DeepSORT Tracking** → Multi-object trajectory analysis  
-🦴 **MediaPipe Pose** → Biomechanical movement assessment  
-⚙️ **Redis + Celery** → Asynchronous processing queue  
-🐳 **Docker Microservices** → Scalable, production-grade architecture  
-📊 **Custom Metrics Engine** → Technical & physical performance profiling
+[View Full Documentation](./projects/GUIRA/README.md)
 
 ---
 
-#### 💎 **WHAT: Performance Insights**
+### MenTora — AI Education for Everyone
 
-**Measurable Impact:**
+<div align="center">
 
-| Metric | Achievement |
-|--------|-------------|
-| 🎯 **Detection Accuracy** | **92%** on live footage |
-| ⚡ **Processing Speed** | **Real-time** (30 FPS) |
-| 📈 **Metrics Tracked** | **50+** technical & physical indicators |
-| 🏗️ **Architecture** | GPU-optimized microservices |
+[![Status](https://img.shields.io/badge/Status-Production-3b82f6?style=flat-square)](#)
+[![Platform](https://img.shields.io/badge/Platform-PWA-4a5568?style=flat-square)](#)
+[![Offline](https://img.shields.io/badge/Offline-Capable-4a5568?style=flat-square)](#)
 
----
+</div>
 
-#### 📸 **Platform Details**
+#### WHY
 
-![Axolotl Analysis Dashboard](./projects/Axolotl/assets/screenshots/dashboard.png)
+The AI revolution is reshaping every industry, but quality AI education remains a privilege. Millions lack access to modern curriculum preparing them for an AI-powered future.
 
-<a href="./projects/Axolotl/assets/screenshots/">
-  <img src="https://img.shields.io/badge/📂_View_All-Screenshots-8B5CF6?style=for-the-badge" />
-</a>
-<a href="./projects/Axolotl/README.md">
-  <img src="https://img.shields.io/badge/📖_Full_Documentation-Technical_Details-667eea?style=for-the-badge" />
-</a>
+**Mission:** Democratize AI education. Ensure no one gets left behind as technology advances.
 
-**Tech Stack:**
-<p align="center">
-<img src="https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=yolo&logoColor=black" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/DeepSORT-8B5CF6?style=flat-square" />
-<img src="https://img.shields.io/badge/MediaPipe-4285F4?style=flat-square&logo=google&logoColor=white" />
-<img src="https://img.shields.io/badge/Docker-2496ED?style=flat-square&logo=docker&logoColor=white" />
-<img src="https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white" />
-</p>
+#### HOW
 
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
+Full-stack Progressive Web Application architecture:
 
-</td>
-</tr>
-</table>
+- **PWA Technology** — Works on any device, installs like native app
+- **Offline-First Design** — Learn without constant internet connection
+- **React 19 Frontend** — Modern, responsive interface
+- **FastAPI Backend** — Lightning-fast Python microservices
+- **Stripe Integration** — Globally accessible pricing
 
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- GUIRA - GREEN/VIOLET GRADIENT -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 🔥 **[GUIRA](https://github.com/THEDIFY/FIREPREVENTION)** - Wildfire Prevention AI
-
-<img src="https://img.shields.io/badge/🌍_Social_Impact-Environmental_Justice-A855F7?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🛰️_Multi_Modal-5_AI_Models-667eea?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/⏰_Early_Warning-35_Min_Lead-00C853?style=for-the-badge&labelColor=0a192f" />
-
----
-
-#### 🎯 **WHY: Protecting Vulnerable Communities**
-
-> **Wildfires devastate small communities—they lack resources for advanced warning systems.**  
-> By the time smoke is visible, it's often too late. Vulnerable populations need early detection to evacuate safely.
-
-**The Mission:** Use AI for environmental justice. Provide small communities with the same advanced fire prediction technology that wealthy areas have. Every life matters.
-
----
-
-#### 🔬 **HOW: Multi-Modal AI Ensemble**
-
-**5-Model Architecture:** Geospatial + Computer Vision + Physics Simulation
-
-🔥 **YOLOv8 Fire Detection** → Real-time wildfire identification  
-💨 **YOLOv8 Smoke Detection** → Early warning signal detection  
-🎬 **TimeSFormer Video** → Temporal pattern analysis  
-🦌 **CSRNet Crowd Density** → Fauna/population monitoring  
-🌿 **ResNet50 Vegetation** → High-risk zone identification  
-🗺️ **GDAL + PostGIS** → Geospatial intelligence & DEM projection  
-🔮 **Physics Simulation** → Fire spread prediction modeling
-
----
-
-#### 💎 **WHAT: Life-Saving Predictions**
-
-**Measurable Impact:**
-
-| Metric | Achievement |
-|--------|-------------|
-| 🔥 **Detection Accuracy** | **95%** fire/smoke identification |
-| ⏰ **Early Warning** | **35 minutes** average lead time |
-| 🗺️ **Risk Mapping** | Geospatial heat maps with 100m precision |
-| 🌍 **Communities Protected** | Focus on underserved populations |
-
----
-
-#### 📸 **Platform Details**
-
-> 🚧 **Visual assets in development** — Detection system screenshots will be added upon deployment completion.
-
-<a href="./projects/GUIRA/assets/screenshots/">
-  <img src="https://img.shields.io/badge/📂_View_All-Screenshots-A855F7?style=for-the-badge" />
-</a>
-<a href="./projects/GUIRA/README.md">
-  <img src="https://img.shields.io/badge/📖_Full_Documentation-Technical_Details-667eea?style=for-the-badge" />
-</a>
-
-**Tech Stack:**
-<p align="center">
-<img src="https://img.shields.io/badge/YOLOv8-00FFFF?style=flat-square&logo=yolo&logoColor=black" />
-<img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=flat-square&logo=pytorch&logoColor=white" />
-<img src="https://img.shields.io/badge/TimeSFormer-FF6F00?style=flat-square" />
-<img src="https://img.shields.io/badge/GDAL-5CAE58?style=flat-square" />
-<img src="https://img.shields.io/badge/PostGIS-336791?style=flat-square&logo=postgresql&logoColor=white" />
-<img src="https://img.shields.io/badge/ResNet50-EE4C2C?style=flat-square" />
-</p>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</td>
-</tr>
-</table>
-
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- MENTORA - PURPLE GRADIENT -->
-<!-- ═══════════════════════════════════════════════════════════════════════════════════════ -->
-
-<table>
-<tr>
-<td align="center" width="100%">
-
-### 📱 **[MenTora](https://github.com/AI-EDIFY/MenTora)** - AI Education for Everyone
-
-<img src="https://img.shields.io/badge/📱_Progressive_Web_App-Offline_Ready-C084FC?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🌍_Accessible-Global_Reach-A855F7?style=for-the-badge&labelColor=0a192f" />
-<img src="https://img.shields.io/badge/🎓_Curriculum-AI/ML_Focus-667eea?style=for-the-badge&labelColor=0a192f" />
-
----
-
-#### 🎯 **WHY: Closing the AI Skills Gap**
-
-> **The AI revolution is reshaping every industry—but quality AI education remains a privilege.**  
-> Millions lack access to modern curriculum preparing them for an AI-powered future. This creates inequality and limits opportunity.
-
-**The Mission:** Democratize AI education. Ensure *no one gets left behind* as technology advances. Make world-class AI/ML learning accessible to anyone with internet access.
-
----
-
-#### 🔬 **HOW: Progressive Web App Architecture**
-
-**Full-Stack Platform:** Modern, accessible, offline-capable
-
-📱 **PWA Technology** → Works on any device, installs like native app  
-🌐 **Offline-First Design** → Learn without constant internet connection  
-⚛️ **React 18 Frontend** → Modern, responsive, beautiful UI  
-⚡ **FastAPI Backend** → Lightning-fast Python microservices  
-💳 **Stripe Integration** → Globally accessible pricing  
-🔐 **JWT Authentication** → Secure, personalized learning paths  
-🎓 **Modern Curriculum** → AI/ML skills relevant for 2025+
-
----
-
-#### 💎 **WHAT: Learning Platform**
-
-**Platform Capabilities:**
+#### WHAT
 
 | Feature | Implementation |
 |---------|----------------|
-| 📱 **Platform Type** | Progressive Web App (PWA) |
-| 🌍 **Accessibility** | Global reach, offline-capable |
-| 🎓 **Curriculum** | AI/ML fundamentals → advanced topics |
-| 💻 **Tech Stack** | React 18 + TypeScript + FastAPI |
+| Platform Type | Progressive Web App (PWA) |
+| Accessibility | Global reach, offline-capable |
+| Curriculum | AI/ML fundamentals to advanced topics |
+| Code Execution | In-browser Python via Pyodide |
+
+**Tech Stack:** React 19, TypeScript, FastAPI, Azure Cosmos DB, Stripe
+
+![MenTora Platform](./projects/MenTora/assets/screenshots/image.png)
+
+[View Full Documentation](./projects/MenTora/README.md)
 
 ---
 
-#### 📸 **Platform Details**
-
-![MenTora Learning Platform](./projects/MenTora/assets/screenshots/image.png)
-
-<a href="./projects/MenTora/assets/screenshots/">
-  <img src="https://img.shields.io/badge/📂_View_All-Screenshots-C084FC?style=for-the-badge" />
-</a>
-<a href="./projects/MenTora/README.md">
-  <img src="https://img.shields.io/badge/📖_Full_Documentation-Technical_Details-667eea?style=for-the-badge" />
-</a>
-
-**Tech Stack:**
-<p align="center">
-<img src="https://img.shields.io/badge/React_18-61DAFB?style=flat-square&logo=react&logoColor=black" />
-<img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" />
-<img src="https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white" />
-<img src="https://img.shields.io/badge/PWA-5A0FC8?style=flat-square&logo=pwa&logoColor=white" />
-<img src="https://img.shields.io/badge/Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" />
-</p>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</td>
-</tr>
-</table>
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- REPRODUCIBILITY & PUBLICATIONS -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="30"> **Reproducibility & Publications**
+### TrofyTruck — Trophy Truck Chassis Optimizer
 
 <div align="center">
 
-### 📖 **Academic Rigor & Transparency**
+[![Status](https://img.shields.io/badge/Status-Development-4a5568?style=flat-square)](#)
+[![Methods](https://img.shields.io/badge/Methods-SIMP_&_Level--Set-3b82f6?style=flat-square)](#)
+[![Target](https://img.shields.io/badge/Target-Baja_1000-4a5568?style=flat-square)](#)
 
-> *Every project includes complete reproducibility guides, Docker environments, and validation steps.*
+</div>
 
-<table>
-<tr>
-<td align="center" width="50%">
+#### WHY
 
-#### 🔬 **Reproducibility**
+Building a competition-ready trophy truck for the Baja 1000 requires optimal chassis design. Traditional design methods rely on intuition and over-engineering, resulting in heavier, less efficient structures.
 
-Each project provides:
+**Mission:** Design the ultimate carbon fiber trophy truck chassis through AI-driven topology optimization—lighter, stronger, faster.
 
-✅ **Docker Containers** - Isolated environments  
-✅ **Step-by-Step Validation** - Reproduce results  
-✅ **Requirements Documentation** - Full dependencies  
-✅ **Expected Outputs** - Benchmarks & metrics  
-✅ **Testing Protocols** - Validation checklists
+#### HOW
 
-📂 See `projects/*/reproducibility/reproduce.md`
+Full-stack topology optimization platform combining FEA, CFD, and manufacturing validation:
 
-</td>
-<td align="center" width="50%">
+- **SIMP & Level-Set Methods** — Advanced topology optimization algorithms
+- **FEA Integration** — Structural validation with FEniCS/CalculiX
+- **CFD Analysis** — Aerodynamic optimization with OpenFOAM
+- **Manufacturing Rules** — Composite layup, drapability, mold splits
+- **3D Visualization** — Real-time WebGL viewer with Three.js
 
-#### 📚 **Publications & Research**
+#### WHAT
 
-**Novel Contributions:**
+| Capability | Implementation |
+|------------|----------------|
+| Optimization Methods | SIMP, Level-Set |
+| Analysis | Static, Modal, Impact, CFD |
+| Materials | Carbon fiber laminate models |
+| Outputs | STEP, IGES, layup schedules, BOM |
 
-🧠 **Custom RAG Technique** (EDIFY)  
-- Personalized vector search algorithm  
-- Hybrid semantic + keyword retrieval  
-- Enterprise-scale architecture
+**Tech Stack:** FastAPI, React, Three.js, PyTorch, FEniCS, PostgreSQL
 
-👁️ **Multi-Modal Disaster AI** (GUIRA)  
-- 5-model ensemble architecture  
-- Geospatial-temporal fusion  
-- Physics-based prediction
+```mermaid
+graph LR
+    D[Design Space] --> O[Topology Optimizer]
+    O --> FE[FE Validation]
+    FE --> CFD[Aero Analysis]
+    CFD --> M[Manufacturing Check]
+    M --> E[Export CAD]
+    
+    style O fill:#3b82f6,stroke:#2563eb,color:#fff
+    style FE fill:#374151,stroke:#6b7280,color:#fff
+    style CFD fill:#374151,stroke:#6b7280,color:#fff
+```
 
-📂 See `projects/*/paper/` for drafts
+[View Full Documentation](./projects/TrofyTruck/README.md)
 
-</td>
-</tr>
-</table>
+---
 
-### 📄 **Citation Information**
+## Reproducibility and Publications
 
-<a href="CITATION.cff">
-  <img src="https://img.shields.io/badge/Citation-CFF_Format-667eea?style=for-the-badge&logo=git&logoColor=white" />
-</a>
+### Academic Rigor
+
+Each project provides complete reproducibility:
+
+- **Docker Containers** — Isolated environments
+- **Step-by-Step Validation** — Reproduce results
+- **Requirements Documentation** — Full dependencies
+- **Expected Outputs** — Benchmarks and metrics
+- **Testing Protocols** — Validation checklists
+
+See `projects/*/reproducibility/reproduce.md` for each project.
+
+### Novel Contributions
+
+| Project | Innovation |
+|---------|------------|
+| EDIFY | Custom RAG technique with hybrid semantic + keyword retrieval |
+| GUIRA | 5-model ensemble with geospatial-temporal fusion |
+| Axolotl | Multi-model CV pipeline with AI coaching integration |
+
+### Citation
 
 ```bibtex
 @software{santiago_thedify_2024,
@@ -650,415 +389,120 @@ Each project provides:
 }
 ```
 
-</div>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- SPECIALIZATIONS - HEXAGONAL FUTURISTIC DESIGN -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="30"> **Specializations & Expertise**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-### 🎯 **Core Technologies**
-
-<table>
-<tr>
-<td align="center" width="20%">
-<img src="https://techstack-generator.vercel.app/python-icon.svg" width="65" height="65" alt="Python" />
-<br><strong>Python</strong>
-<br><sub>⚡ Expert</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://techstack-generator.vercel.app/js-icon.svg" width="65" height="65" alt="JavaScript" />
-<br><strong>JavaScript</strong>
-<br><sub>🔥 Advanced</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://techstack-generator.vercel.app/cpp-icon.svg" width="65" height="65" alt="C++" />
-<br><strong>C++</strong>
-<br><sub>💪 Proficient</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://techstack-generator.vercel.app/ts-icon.svg" width="65" height="65" alt="TypeScript" />
-<br><strong>TypeScript</strong>
-<br><sub>✨ Advanced</sub>
-</td>
-<td align="center" width="20%">
-<img src="https://techstack-generator.vercel.app/react-icon.svg" width="65" height="65" alt="React" />
-<br><strong>React</strong>
-<br><sub>⚛️ Advanced</sub>
-</td>
-</tr>
-</table>
-
-### 🧠 **AI/ML Specializations**
-
-<table>
-<tr>
-<td align="center" width="25%">
-
-**🔬 Fine-tuning**
-
-LLM Optimization  
-Domain Adaptation  
-Transfer Learning  
-Custom Models
-
-</td>
-<td align="center" width="25%">
-
-**🤖 AI Agents**
-
-Multi-step Reasoning  
-Tool Integration  
-Autonomous Systems  
-Orchestration
-
-</td>
-<td align="center" width="25%">
-
-**📚 RAG Systems**
-
-Novel Techniques  
-Hybrid Search  
-Citation Tracking  
-Context Management
-
-</td>
-<td align="center" width="25%">
-
-**👁️ Computer Vision**
-
-Object Detection  
-Video Analysis  
-Real-time Processing  
-Segmentation
-
-</td>
-</tr>
-</table>
-
-### ☁️ **Cloud & Frameworks**
-
-<table>
-<tr>
-<td align="center" width="16.66%">
-<img src="https://techstack-generator.vercel.app/aws-icon.svg" width="50" height="50" alt="Azure" />
-<br><strong>Azure</strong>
-</td>
-<td align="center" width="16.66%">
-<img src="https://user-images.githubusercontent.com/74038190/212257465-7ce8d493-cac5-494e-982a-5a9deb852c4b.gif" width="50" height="50" alt="PyTorch" />
-<br><strong>PyTorch</strong>
-</td>
-<td align="center" width="16.66%">
-<img src="https://user-images.githubusercontent.com/74038190/212257460-738ff738-247f-4445-a718-cdd0ca76e2db.gif" width="50" height="50" alt="TensorFlow" />
-<br><strong>TensorFlow</strong>
-</td>
-<td align="center" width="16.66%">
-<img src="https://techstack-generator.vercel.app/docker-icon.svg" width="50" height="50" alt="Docker" />
-<br><strong>Docker</strong>
-</td>
-<td align="center" width="16.66%">
-<img src="https://user-images.githubusercontent.com/74038190/212257467-871d32b7-e401-42e8-a166-fcfd7baa4c6b.gif" width="50" height="50" alt="Redis" />
-<br><strong>Redis</strong>
-</td>
-<td align="center" width="16.66%">
-<img src="https://user-images.githubusercontent.com/74038190/212257454-16e3712e-945a-4ca2-b238-408ad0bf87e6.gif" width="50" height="50" alt="Git" />
-<br><strong>Git</strong>
-</td>
-</tr>
-</table>
-
-### 📊 **Skill Mastery Levels**
-
-```
-AI/ML Engineering    ████████████████████ 100%  🔥 Expert (Novel RAG, Fine-tuning, Agents)
-Computer Vision      ██████████████████░░  90%  👁️ Advanced (Detection, Segmentation, Video)
-Backend Development  ██████████████████░░  90%  🏗️ Advanced (APIs, Microservices, Cloud)
-Python Programming   ████████████████████ 100%  🐍 Expert (PyTorch, TensorFlow, FastAPI)
-Cloud (Azure)        ████████████████░░░░  80%  ☁️ Proficient (OpenAI, Search, Cosmos DB)
-JavaScript/TS        ████████████████░░░░  80%  ⚡ Proficient (React, Node.js, TypeScript)
-UI/UX Design         ██████████████░░░░░░  70%  🎨 Intermediate (Concepts, Sketching)
-C++                  ████████████░░░░░░░░  60%  💻 Intermediate (Algorithms, Performance)
-```
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
-
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- BEYOND CODE - LAMBORGHINI & JOSÉ JOSÉ -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/216122069-5b8169d7-1d8e-4a13-b245-a8e4176c99f8.png" width="30" /> **Beyond Code: My Passions**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- LAMBORGHINI EGOISTA -->
-<table>
-<tr>
-<td width="50%" align="center" valign="center">
-
-<img src="https://s2.paultan.org/image/2013/05/Lamborghini_Egoista_Concept_07.jpg" width="100%" style="border-radius: 15px; border: 3px solid #00F5FF; box-shadow: 0 0 20px #00F5FF;"/>
-
-</td>
-<td width="50%" align="left" valign="center">
-
-### 🚗 **Automotive Passion**
-
-#### **Lamborghini Egoista** 
-*The Fighter Jet of the Road*
-
-> *"Where engineering perfection meets artistic rebellion.  
-> The Egoista embodies pure, uncompromising performance—  
-> a single-seat masterpiece that rejects all compromise."*
-
-**Why it inspires me:**
-- ⚡ **600 HP V10 Engine** - Raw, unbridled power
-- 🛫 **Fighter Jet Design** - Aerodynamics as art form
-- 🎯 **Single Seat Philosophy** - Built for one purpose: speed
-- 💎 **Carbon Fiber Sculpture** - Engineering as high art
-- 🏎️ **Zero Compromise** - Every element serves performance
-
-*The Egoista represents my coding philosophy:*  
-**Bold. Efficient. Uncompromising Quality.**
-
-*Just as the Egoista pushes boundaries in automotive design,  
-my code pushes boundaries in AI innovation.*
-
-</td>
-</tr>
-</table>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- JOSÉ JOSÉ -->
-<table>
-<tr>
-<td width="50%" align="right" valign="center">
-
-### 🎵 **Musical Heritage**
-
-#### **José José**
-*"El Príncipe de la Canción" - The Prince of Song*
-
-> *"His voice transcends generations, carrying the soul  
-> of Mexican music through every note. José José's  
-> emotional depth and technical mastery inspire me  
-> to bring that same passion to every line of code."*
-
-**Why he matters to me:**
-- 🎤 **Unmatched Vocal Artistry** - Technical perfection
-- 💫 **Emotional Storytelling** - Every song tells a universal truth
-- 🇲🇽 **Cultural Pride** - Mexican excellence recognized worldwide
-- 🎼 **Timeless Legacy** - Music that transcends time
-- ❤️ **Passion in Every Note** - 100% commitment to craft
-
-**Legendary tracks that fuel my innovation:**  
-*"El Triste" | "Gavilán o Paloma" | "Almohada" | "40 y 20"*
-
-*His dedication mirrors my approach:*  
-**Every Detail Matters. Every Note Counts. Perfection is the Standard.**
-
-*From his emotional depth to my code's precision—  
-passion drives excellence in every field.*
-
-</td>
-<td width="50%" align="center" valign="center">
-
-<img src="https://3.bp.blogspot.com/-IrQ2Zzha1co/UwIfDrN2eBI/AAAAAAABlRo/4LPx72UTCCI/s1600/Jos%C3%A9+Jos%C3%A905.jpg" width="100%" style="border-radius: 15px; border: 3px solid #A855F7; box-shadow: 0 0 20px #A855F7;"/>
-
-</td>
-</tr>
-</table>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- DESIGN PHILOSOPHY -->
-<table>
-<tr>
-<td align="center" width="100%">
-
-### ✏️ **DESIGN** 
-
-#### *Pencil & Paper: Where Innovation Begins*
-
-> *"Every breakthrough starts with a simple sketch.  
-> Before algorithms, before architectures, before a single line of code—  
-> there's pencil and paper. This is where ideas flow freely,  
-> unconstrained by syntax or frameworks."*
-
-**My Design Process:**
-
-📝 **1. Sketch the Vision** - Ideas flow fastest on paper  
-🎨 **2. Refine the Concept** - Visual thinking unlocks creativity  
-💻 **3. Architect the System** - Transform sketches into structure  
-⚙️ **4. Code the Reality** - Implement with precision  
-✨ **5. Iterate & Perfect** - Back to paper, refine, repeat
-
-**Why Analog Design Matters:**
-
-- 🧠 **Engages Different Brain Regions** - Creativity flows differently on paper
-- ⚡ **Faster Ideation** - No technical constraints during brainstorming
-- 🎯 **Forces Simplicity** - Complexity reveals itself immediately
-- 💡 **Unexpected Connections** - Visual thinking creates novel solutions
-- 🌊 **Natural Flow** - Hand movements mirror thought patterns
-
-*This approach shapes every system I build:*  
-**Clean. Elegant. Purposeful. Human-Centered.**
-
-*From pencil sketches to production code—  
-the journey of innovation always starts with a single line on paper.*
-
-</td>
-</tr>
-</table>
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- KEY ACHIEVEMENTS -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/216122065-2f028bae-25d6-4a3c-bc9f-175394ed5011.png" width="30" /> **Key Achievements**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-| 🏆 Achievement | 📝 Details |
-|:---:|:---|
-| **🚀 Founder & CEO** | Created EDIFY - Enterprise AI education platform serving 100+ users |
-| **🔬 RAG Innovation** | Pioneered novel retrieval technique for personalized learning |
-| **⚡ Enterprise Scale** | Built production system with sub-2s latency, 99.9% uptime |
-| **🎯 Multi-Modal AI** | Integrated 5+ specialized models (YOLO, TimeSFormer, ResNet, CSRNet) |
-| **🏗️ Architecture Expert** | Designed scalable microservices with Docker orchestration |
-| **📚 Open Source Advocate** | Contributing to democratized AI education |
-| **🎓 Student Innovator** | Building enterprise-grade solutions while in high school |
-| **🌍 Social Impact** | Using AI for community protection and equal opportunities |
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- CONNECT & CURRENT FOCUS -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/216120981-b9507c36-0e04-4469-8e27-c99271b45ba5.png" width="30" /> **Let's Connect**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<p align="center">
-  <a href="https://github.com/THEDIFY">
-    <img src="https://img.shields.io/badge/GitHub-THEDIFY-181717?style=for-the-badge&logo=github&logoColor=white" />
-  </a>
-  <a href="mailto:rasanti2008@gmail.com">
-    <img src="https://img.shields.io/badge/Email-Contact_Me-00F5FF?style=for-the-badge&logo=gmail&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/santiago-ramirez-0a5073292/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-8B5CF6?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</p>
-
-> *Open to collaborations, discussions, and opportunities*  
-> *Let's build something amazing together!*
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- CURRENT FOCUS -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-## <img src="https://user-images.githubusercontent.com/74038190/212257468-1e9a91f1-b626-4baa-b15d-5c385dfa7ed2.gif" width="30" /> **Current Focus**
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-```typescript
-interface CurrentJourney {
-    flagship: string[];
-    research: string[];
-    learning: string[];
-    impact: string;
-}
-
-const myMission: CurrentJourney = {
-    flagship: [
-        "🎓 EDIFY: Scaling personalized AI education platform",
-        "⚽ Axolotl: Empowering athletes with advanced CV analytics",
-        "🔥 GUIRA: Protecting communities from natural disasters",
-        "🎯 MenTora: Preparing everyone for the AI-powered future"
-    ],
-    research: [
-        "🧠 Novel RAG techniques for personalized learning",
-        "🔍 Hybrid search optimization for semantic retrieval",
-        "👁️ Real-time video processing for sports analytics",
-        "🌍 Multi-modal AI for environmental protection"
-    ],
-    learning: [
-        "⚡ Advanced LLM fine-tuning & domain adaptation",
-        "☁️ Production MLOps on Azure at enterprise scale",
-        "🎬 GPU-accelerated real-time video processing",
-        "🏗️ Scalable microservices architecture patterns"
-    ],
-    impact: "Giving everyone the same starting line 🚀"
-};
-
-console.log("Always building. Always learning. Always innovating.");
-console.log("Mission: Empowering dreams through technology ✨");
-```
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-</div>
-
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-<!-- PHILOSOPHY & FOOTER -->
-<!-- ══════════════════════════════════════════════════════════════════════════════════════════════════ -->
-
-<div align="center">
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-### 💭 **My Philosophy**
-
-> *"The best way to predict the future is to build it.  
-> But the best way to build it is to ensure everyone  
-> has the same starting line to achieve their dreams."*
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=THEDIFY&label=Profile%20Views&color=00F5FF&style=for-the-badge" alt="Profile Views" />
-</p>
-
-**⭐ Star my repos if they inspire you | 🔔 Follow for AI innovation | 💬 Let's build the future together**
-
-<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%">
-
-<!-- FOOTER WAVE -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=0,2,3,5,6,8,12,20,24,30&height=150&section=footer&animation=twinkling"/>
+---
+
+## Technical Expertise
+
+### Core Technologies
+
+| Category | Technologies |
+|----------|-------------|
+| **Languages** | Python, JavaScript, TypeScript, C++ |
+| **AI/ML** | PyTorch, TensorFlow, Hugging Face, LangChain |
+| **Computer Vision** | YOLOv8, MediaPipe, OpenCV, SMPL |
+| **Cloud** | Azure OpenAI, Azure AI Search, Cosmos DB |
+| **Backend** | FastAPI, Flask, Redis, Celery |
+| **Frontend** | React, TypeScript, TailwindCSS |
+| **DevOps** | Docker, GitHub Actions, Nginx |
+
+### Specializations
+
+| Area | Focus |
+|------|-------|
+| **Fine-tuning** | LLM optimization, domain adaptation, transfer learning |
+| **AI Agents** | Multi-step reasoning, tool integration, orchestration |
+| **RAG Systems** | Hybrid search, citation tracking, context management |
+| **Computer Vision** | Object detection, video analysis, real-time processing |
 
 ---
 
-*Made with 💙 by THEDIFY | Founder & CEO of EDIFY*
+## Beyond Code
 
-*"Empowering dreams through code, one innovation at a time"* 🌟
+### Design Philosophy
+
+> *"Every breakthrough starts with a simple sketch. Before algorithms, before architectures, before a single line of code—there's pencil and paper."*
+
+Like the **Lamborghini Egoista**—a single-seat masterpiece that rejects all compromise—my approach to engineering emphasizes bold innovation, efficiency, and uncompromising quality. Every element serves a purpose.
+
+<div align="center">
+
+![Lamborghini Egoista](https://i.pinimg.com/originals/27/5e/31/275e317f91b79e8ee8b08ece0d64e0c8.jpg)
+
+*The Lamborghini Egoista: Form follows function. No compromise.*
+
+</div>
+
+This philosophy extends to every system I build: **Clean. Elegant. Purposeful. Human-Centered.**
+
+---
+
+## Key Achievements
+
+| Achievement | Details |
+|-------------|---------|
+| Founder and CEO | Created EDIFY — Enterprise AI education platform serving 100+ users |
+| RAG Innovation | Pioneered novel retrieval technique for personalized learning |
+| Enterprise Scale | Built production system with sub-2s latency, 99.9% uptime |
+| Multi-Modal AI | Integrated 5+ specialized models (YOLO, TimeSFormer, ResNet, CSRNet) |
+| Architecture Expert | Designed scalable microservices with Docker orchestration |
+| Student Innovator | Building enterprise-grade solutions while in high school |
+
+---
+
+## Connect
+
+<div align="center">
+
+[![GitHub](https://img.shields.io/badge/GitHub-THEDIFY-374151?style=flat-square&logo=github&logoColor=white)](https://github.com/THEDIFY)
+[![Email](https://img.shields.io/badge/Email-Contact-3b82f6?style=flat-square&logo=gmail&logoColor=white)](mailto:rasanti2008@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-374151?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/santiago-ramirez-0a5073292/)
+
+*Open to collaborations, discussions, and opportunities.*
+
+</div>
+
+---
+
+## Current Focus
+
+```typescript
+const currentJourney = {
+    flagship: [
+        "EDIFY: Scaling personalized AI education platform",
+        "Axolotl: Empowering athletes with advanced CV analytics",
+        "GUIRA: Protecting communities from natural disasters",
+        "MenTora: Preparing everyone for the AI-powered future",
+        "TrofyTruck: Designing carbon fiber chassis for Baja 1000"
+    ],
+    research: [
+        "Novel RAG techniques for personalized learning",
+        "Hybrid search optimization for semantic retrieval",
+        "Real-time video processing for sports analytics",
+        "Multi-modal AI for environmental protection",
+        "Topology optimization for composite structures"
+    ],
+    learning: [
+        "Advanced LLM fine-tuning and domain adaptation",
+        "Production MLOps on Azure at enterprise scale",
+        "GPU-accelerated real-time video processing",
+        "Scalable microservices architecture patterns"
+    ],
+    impact: "Giving everyone the same starting line"
+};
+```
+
+---
+
+<div align="center">
+
+### Philosophy
+
+> *"The best way to predict the future is to build it. But the best way to build it is to ensure everyone has the same starting line to achieve their dreams."*
+
+---
+
+**MIT License** | Made by THEDIFY
+
+*Empowering dreams through DESIGN, one sketch at a time.*
 
 </div>

@@ -16,7 +16,7 @@
 
 ## System Overview
 
-EDIFY is built on a modern microservices architecture designed for high availability, scalability, and performance. The system processes 1,000+ concurrent users with sub-2-second response latency while maintaining 99.9% uptime.
+EDIFY is built on a modern microservices architecture designed for high availability, scalability, and performance. The system processes 100+ concurrent users with sub-2-second response latency while maintaining 99.9% uptime.
 
 ### High-Level Architecture
 
