@@ -218,6 +218,32 @@ graph LR
 | User Capacity | 10,000+ | Enterprise-grade |
 | Citation Accuracy | 95%+ | Academic-grade |
 
+### Platform Screenshots
+
+<div align="center">
+
+![EDIFY Main Interface](./assets/screenshots/screenshot-1766005977088.png)
+
+*Clean, intuitive learning interface with AI-powered responses*
+
+![EDIFY Study Mode](./assets/screenshots/screenshot-1766006023507.png)
+
+*Study mode with document-based learning assistance*
+
+![EDIFY Tutor Mode](./assets/screenshots/screenshot-1766006041725.png)
+
+*Interactive tutor mode with step-by-step guidance*
+
+![EDIFY Progress Dashboard](./assets/screenshots/screenshot-1766006054376.png)
+
+*Learning analytics and progress tracking*
+
+![EDIFY Citation System](./assets/screenshots/screenshot-1766006080306.png)
+
+*Transparent citation system for academic integrity*
+
+</div>
+
 ---
 
 ## Tech Stack

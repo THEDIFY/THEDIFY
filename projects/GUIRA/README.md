@@ -303,6 +303,24 @@ graph TB
 | Spatial Precision | 100m geospatial accuracy |
 | Processing Speed | Real-time inference (30 FPS) |
 
+### Platform Visuals
+
+<div align="center">
+
+![GUIRA Dashboard Overview](./assets/screenshots/Screenshot_11-1-2026_163352_www.canva.com.jpeg)
+
+*System dashboard with real-time fire risk monitoring*
+
+![GUIRA Detection Interface](./assets/screenshots/Screenshot_11-1-2026_16347_www.canva.com.jpeg)
+
+*Multi-model detection pipeline visualization*
+
+![GUIRA Alert System](./assets/screenshots/Screenshot_11-1-2026_163422_www.canva.com.jpeg)
+
+*Community alert and evacuation planning interface*
+
+</div>
+
 ---
 
 ## Tech Stack

@@ -58,10 +58,11 @@ graph TB
     PROJECTS --> GUIRA[GUIRA<br/>Fire Prevention]
     PROJECTS --> MENTORA[MenTora<br/>EdTech PWA]
     PROJECTS --> TALENTO[TalenTo<br/>Talent Platform]
+    PROJECTS --> TROPHY[TrofyTruck<br/>Chassis Optimization]
     
-    TECH --> AI[AI/ML<br/>RAG | CV | LLMs]
-    TECH --> CLOUD[Cloud<br/>Azure | Docker]
-    TECH --> CODE[Development<br/>Python | React | TS]
+    TECH --> AI[AI/ML<br/>RAG, CV, LLMs]
+    TECH --> CLOUD[Cloud<br/>Azure, Docker]
+    TECH --> CODE[Development<br/>Python, React, TS]
     
     MISSION --> EQUAL[Equal Access]
     MISSION --> IMPACT[Social Impact]
@@ -76,6 +77,7 @@ graph TB
     style GUIRA fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
     style MENTORA fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
     style TALENTO fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style TROPHY fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
 ```
 
 ---
@@ -90,7 +92,8 @@ Each project includes dedicated documentation, technical deep-dives, reproducibi
 | **[Axolotl](./projects/Axolotl/README.md)** | AI Sports Analytics Platform | Beta | [Details](./projects/Axolotl/README.md) &#124; [Abstract](./projects/Axolotl/ABSTRACT.md) |
 | **[GUIRA](./projects/GUIRA/README.md)** | Wildfire Prevention & Disaster AI | Research | [Details](./projects/GUIRA/README.md) &#124; [Abstract](./projects/GUIRA/ABSTRACT.md) |
 | **[MenTora](./projects/MenTora/README.md)** | AI Education PWA | Production | [Details](./projects/MenTora/README.md) &#124; [Abstract](./projects/MenTora/ABSTRACT.md) |
-| **[TalenTo](./projects/TalenTo/README.md)** | Talent Discovery Platform | Development | [Details](./projects/TalenTo/README.md) |
+| **[TalenTo](./projects/TalenTo/README.md)** | Technical Trades Platform | Development | [Details](./projects/TalenTo/README.md) |
+| **[TrofyTruck](./projects/TrofyTruck/README.md)** | Trophy Truck Chassis Optimizer | Development | [Details](./projects/TrofyTruck/README.md) |
 
 ---
 
@@ -298,6 +301,60 @@ Full-stack Progressive Web Application architecture:
 
 ---
 
+### TrofyTruck — Trophy Truck Chassis Optimizer
+
+<div align="center">
+
+[![Status](https://img.shields.io/badge/Status-Development-4a5568?style=flat-square)](#)
+[![Methods](https://img.shields.io/badge/Methods-SIMP_&_Level--Set-3b82f6?style=flat-square)](#)
+[![Target](https://img.shields.io/badge/Target-Baja_1000-4a5568?style=flat-square)](#)
+
+</div>
+
+#### WHY
+
+Building a competition-ready trophy truck for the Baja 1000 requires optimal chassis design. Traditional design methods rely on intuition and over-engineering, resulting in heavier, less efficient structures.
+
+**Mission:** Design the ultimate carbon fiber trophy truck chassis through AI-driven topology optimization—lighter, stronger, faster.
+
+#### HOW
+
+Full-stack topology optimization platform combining FEA, CFD, and manufacturing validation:
+
+- **SIMP & Level-Set Methods** — Advanced topology optimization algorithms
+- **FEA Integration** — Structural validation with FEniCS/CalculiX
+- **CFD Analysis** — Aerodynamic optimization with OpenFOAM
+- **Manufacturing Rules** — Composite layup, drapability, mold splits
+- **3D Visualization** — Real-time WebGL viewer with Three.js
+
+#### WHAT
+
+| Capability | Implementation |
+|------------|----------------|
+| Optimization Methods | SIMP, Level-Set |
+| Analysis | Static, Modal, Impact, CFD |
+| Materials | Carbon fiber laminate models |
+| Outputs | STEP, IGES, layup schedules, BOM |
+
+**Tech Stack:** FastAPI, React, Three.js, PyTorch, FEniCS, PostgreSQL
+
+```mermaid
+graph LR
+    D[Design Space] --> O[Topology Optimizer]
+    O --> FE[FE Validation]
+    FE --> CFD[Aero Analysis]
+    CFD --> M[Manufacturing Check]
+    M --> E[Export CAD]
+    
+    style O fill:#3b82f6,stroke:#2563eb,color:#fff
+    style FE fill:#374151,stroke:#6b7280,color:#fff
+    style CFD fill:#374151,stroke:#6b7280,color:#fff
+```
+
+[View Full Documentation](./projects/TrofyTruck/README.md)
+
+---
+
 ## Reproducibility and Publications
 
 ### Academic Rigor
@@ -367,6 +424,14 @@ See `projects/*/reproducibility/reproduce.md` for each project.
 
 Like the **Lamborghini Egoista**—a single-seat masterpiece that rejects all compromise—my approach to engineering emphasizes bold innovation, efficiency, and uncompromising quality. Every element serves a purpose.
 
+<div align="center">
+
+![Lamborghini Egoista](https://i.pinimg.com/originals/27/5e/31/275e317f91b79e8ee8b08ece0d64e0c8.jpg)
+
+*The Lamborghini Egoista: Form follows function. No compromise.*
+
+</div>
+
 This philosophy extends to every system I build: **Clean. Elegant. Purposeful. Human-Centered.**
 
 ---
@@ -406,13 +471,15 @@ const currentJourney = {
         "EDIFY: Scaling personalized AI education platform",
         "Axolotl: Empowering athletes with advanced CV analytics",
         "GUIRA: Protecting communities from natural disasters",
-        "MenTora: Preparing everyone for the AI-powered future"
+        "MenTora: Preparing everyone for the AI-powered future",
+        "TrofyTruck: Designing carbon fiber chassis for Baja 1000"
     ],
     research: [
         "Novel RAG techniques for personalized learning",
         "Hybrid search optimization for semantic retrieval",
         "Real-time video processing for sports analytics",
-        "Multi-modal AI for environmental protection"
+        "Multi-modal AI for environmental protection",
+        "Topology optimization for composite structures"
     ],
     learning: [
         "Advanced LLM fine-tuning and domain adaptation",
@@ -436,6 +503,6 @@ const currentJourney = {
 
 **MIT License** | Made by THEDIFY
 
-*Empowering dreams through code, one innovation at a time.*
+*Empowering dreams through DESIGN, one sketch at a time.*
 
 </div>
