@@ -426,7 +426,7 @@ Like the **Lamborghini Egoista**—a single-seat masterpiece that rejects all co
 
 <div align="center">
 
-![Lamborghini Egoista][(https://i.pinimg.com/originals/27/5e/31/275e317f91b79e8ee8b08ece0d64e0c8.jpg](https://s2.paultan.org/image/2013/05/Lamborghini_Egoista_Concept_07.jpg))
+![Lamborghini Egoista][(https://s2.paultan.org/image/2013/05/Lamborghini_Egoista_Concept_07.jpg)]
 
 *The Lamborghini Egoista: Form follows function. No compromise.*
 
